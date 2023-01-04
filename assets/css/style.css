@@ -1,0 +1,53 @@
+body {
+    background: whitesmoke;
+}
+
+div {
+    width: 250px;
+    height: 250px;
+    background: black;
+    border: solid;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.flex-item-blue {
+    background-color: whitesmoke;
+    height: 45px;
+    width: 45px;
+}
+
+.number-div {
+    background-color: whitesmoke;
+    height: 13px;
+    width: 13px;
+    font-size: small;
+}
+
+.input-box {
+    width: 45%;
+    height: 45%;
+    margin-top: 2%;
+    margin-left: 20%;
+}
+
+#fifthdiv {
+    background: black;
+}
+
+#tenthdiv {
+    background: black;
+}
+
+#sixteenthdiv {
+    background: black;
+}
+
+#twentyfirstdiv {
+    background: black;
+}
