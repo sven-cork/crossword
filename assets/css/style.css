@@ -13,6 +13,7 @@ body {
     background: black;
     border: solid;
     margin-left: 10%;
+    margin-right: 5%;
 }
 
 .flex-container-crossword {
@@ -27,21 +28,23 @@ body {
     width: 250px;
     background: blue;
     position: fixed; 
-    right: 10%;
-    top: 10%;
+    right: 40%;
+    left: 40%;
+    top: 5%;
+    margin-left: 50px;
 }
 
 .flex-container-clues {
     display: flex;
     flex-direction: row;
-    width: 120px;
+    width: 1200px;
     height: 250px;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 10%;
 }
 
 #across-clues, #vertical-clues {
-    width: 600px;
+    width: 400px;
     height: 250px;
 }
 
