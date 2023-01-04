@@ -20,7 +20,15 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
+}
+
+#timer-result {
+    height: 250px;
+    width: 250px;
+    background: blue;
+    position: fixed; 
+    right: 10%;
+    top: 10%;
 }
 
 .flex-container-clues {
@@ -29,6 +37,7 @@ body {
     width: 120px;
     height: 250px;
     margin-top: 5%;
+    margin-left: 10%;
 }
 
 #across-clues, #vertical-clues {
