@@ -2,18 +2,38 @@ body {
     background: whitesmoke;
 }
 
-div {
+#game-name {
+    margin-left: 10%;
+
+}
+
+#crossword-container {
     width: 250px;
     height: 250px;
     background: black;
     border: solid;
+    margin-left: 10%;
 }
 
-.flex-container {
+.flex-container-crossword {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    
+}
+
+.flex-container-clues {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    height: 250px;
+    margin-top: 5%;
+}
+
+#across-clues, #vertical-clues {
+    width: 600px;
+    height: 250px;
 }
 
 .flex-item-blue {
