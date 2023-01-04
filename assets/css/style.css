@@ -56,6 +56,11 @@ body {
     margin-left: 20%;
 }
 
+.clues-paragraph {
+    height: 20px;
+    width: 500px;
+}
+
 #fifthdiv {
     background: black;
 }
