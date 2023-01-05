@@ -12,8 +12,13 @@ function compareEntries() {
     
     //User entered value and cell number for second cell
     let secondKeyPressed = document.getElementById("sixth-key-input").value;
-    let divNumber = document.getElementById("sixth-divsub").textContent;
-    console.log("Div Number from compareEntries function:", divNumber);
+    let secondDivNumber = document.getElementById("sixth-divsub").textContent;
+    console.log("Div Number from compareEntries function:", secondDivNumber);
+
+    //User entered value and cell number for third cell
+    let thirdKeyPressed = document.getElementById("eleventh-key-input").value;
+    let thirdDivNumber = document.getElementById("eleventh-divsub").textContent;
+    console.log("Div Number from compareEntries function:", thirdDivNumber);
 
     console.log(correctFirstDown);
 }
