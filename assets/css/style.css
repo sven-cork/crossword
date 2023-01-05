@@ -26,11 +26,11 @@ body {
 #timer-result {
     height: 250px;
     width: 250px;
-    background: blue;
+    background: pink;
     position: fixed; 
     right: 40%;
     left: 40%;
-    top: 5%;
+    top: 10%;
     margin-left: 50px;
 }
 
