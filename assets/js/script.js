@@ -5,6 +5,8 @@ function updateResult() {
     let letterObject = {First:"something"}
 
     let keyPressed = document.getElementById("key-input").value;
+    let divNumber = document.getElementById("firstdiv").innerText;
+    console.log("Div Number:", divNumber);
     console.log("keyPress", keyPressed);
     document.getElementById("key-result").innerText = keyPressed;
     letterList.push(keyPressed);
