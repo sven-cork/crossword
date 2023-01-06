@@ -31,8 +31,9 @@ body {
     position: fixed; 
     right: 40%;
     left: 40%;
-    top: 10%;
+    top: 12%;
     margin-left: 50px;
+    margin-bottom: 50%;
 }
 
 .flex-container-clues {
@@ -84,4 +85,34 @@ body {
     border-color: green;
     border-width: 10%;
     border-style: solid;
+}
+
+/*Footer section*/
+footer {
+    height: 75px;
+}
+
+footer ul {
+    text-align: center;
+    height: inherit;
+}
+
+footer li {
+    display: inline;
+}
+
+footer i {
+    color: rgb(96, 38, 13);
+    font-size: 150%;
+    margin: 1%;
+    padding: 5%;
+}
+
+.green-tic {
+    color: green;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
 }

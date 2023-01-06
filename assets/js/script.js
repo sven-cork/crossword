@@ -29,6 +29,12 @@ function checkFirstDown() {
         answerbox.innerText = firstDownWord;
         console.log("User entered first down word is correct");
         console.log("First Down Word: ", firstDownWord)
+
+        //Add green tick next to the clue for the word indicating correct word entered
+        let firstWordClue = document.getElementById("first-word-accros-clue");
+        firstWordClue.classList.add("fa-solid");
+        firstWordClue.classList.add("fa-check");
+        firstWordClue.classList.add("green-tic");
         
     } 
 }
