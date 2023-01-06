@@ -89,7 +89,15 @@ function updateResult() {
     checkFirstDown()
 }
 
+function resetAll() {
+    let greenTickElements = document.getElementById("first-word-accros-clue");
+    greenTickElements.classList.remove("fa-solid");
+    greenTickElements.classList.remove("fa-check");
+    greenTickElements.classList.remove("green-tic");
+}
+
 document.getElementById("submit-button").addEventListener("click", updateResult);
+document.getElementById("reset-button").addEventListener("click", resetAll);
 
 
 
