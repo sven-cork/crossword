@@ -1,108 +1,248 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Crossword
 
-Welcome sven-cork,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Crossword is a basic crossword game with 10 words to figure out based on five vertical and five horizontal clues.
+When the correct word is entered a green check appears next to the corresponding clue.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Love Art displayed in Am I Responsive Website (https://ui.dev/amiresponsive?url=https://sven-cork.github.io/love-art)](/assets/images/responsive-website3.jpg)
 
-## Gitpod Reminders
+## Table of contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [Features](#features)
+  - [Navigation](#navigation)
+  - [Footer](#footer)
+  - [Home Page](#home-page)
+  - [Artwork](#artwork)
+  - [Enrollment](#enrollment)
+- [Technologies Utilised](#technologies-utilised)
+- [Testing](#testing)
+- [Validation](#validation)
+  - [HTML Validation](#html-validation)
+  - [CSS Validation](#css-validation)
+- [Performance/Accessibility](#performanceaccessibility)
+  - [Lighthouse Desktop version test outcome](#lighthouse-desktop-version-test-outcome)
+  - [Lighthouse Mobile version test outcome](#lighthouse-mobile-version-test-outcome)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-`python3 -m http.server`
+## Features
 
-A blue button should appear to click: _Make Public_,
+- ### Navigation 
+  - The community logo "LOVE ART" is displayed in the top left corner of navigation.  
+  - The navigation bar is displayed on all pages.
+  - Links to all pages are located on left hand side for screen width above 1050px. For smaller screen sizes links drop below the Love Art logo.
+  - Page links underline when selected to guide the user with navigation.
 
-Another blue button should appear to click: _Open Browser_.
+      
+  ![Screenshot of Love Art navigation bar](/assets/images/navigation.jpg)
+      
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- ### Footer
+  - The footer contains social media links for Facebook, Twitter and Instagram.
+  - The links are stylised icons from Font Awesome.
+  - The links are displayed on all pages for easy navigation.
 
-A blue button should appear to click: _Make Public_,
+      
+  ![Screenshot of Love Art footer](/assets/images/footer.jpg)
+  
 
-Another blue button should appear to click: _Open Browser_.
+- ### Home Page
+  - The home page contains a hero image displaying a paing palette with colours and brush, aligning with the theme of this website.
+  - In the bottom right corner is a small overlay with Love Art name and slogan. The background color is matched to the overall color 
+    style of the hero image.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  
+  ![Screenshot of Home page Hero Image](/assets/images/hero-image-readme.jpg)
 
-To log into the Heroku toolbelt CLI:
+  - In the middle of the Home page there are three separate sections advertising the following activites: "Drawing Walks", "Group Events" and an invitation to learn painting and drawing.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  ![Screenshot of Home page events section](/assets/images/home-page-events2.jpg)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - At the end of the Home page there is a section displaying feedback from Art Lover event participants.
 
-------
+  ![Screenshot of Home page feedback section](/assets/images/feedback.jpg)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- ### Artwork
+  - The Artwork page contains a gallery of art pieces created by Love Art community members.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+  ![Screenshot of Artwork gallery](/assets/images/gallery.jpg)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- ### Enrollment
+  - The Enrollment page features a form with fields for visitors to enter email address, first and last name.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  ![Screenshot of Enrollment form](/assets/images/enrollment-form.jpg)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  - From a drop menu the visitor can choose the event to enroll.
+  - Three maps are provided displaying the location for each activity including meetup date and times.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+  ![Screenshot of Enrollment map location](/assets/images/map-location.jpg)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Technologies Utilised
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- [Google Fonts](https://fonts.google.com/) was used to import fonts: Quicksand, Tangerine and Xanh.
+- [Fontawesome](https://fontawesome.com/) was used for social media icons in the Footer.
+- [Google Maps](https://maps.google.com) was used for maps iFrames on the Enroll page.
+- [TinyPNG](https://tinypng.com/) was used to compress jpeg images.
+- Preview.app for macOS was used to re-size images used with Love Art.
+- [GitPod](https://gitpod.io/) was used to code HTML and CSS.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- The enrollment form works validating successfully with Code Institue formdump.
+- The site has been tested to work with the following web browsers: Safari, Chrome and Firefox
+- Love Art website displays as intended for all screen sizes when tested with Google Chrome dev tools pre-configured device formats. When the browser window is adjusted manually from maximum to smallest width, all elements display as intended.
+- Manual testing of the site was successful on the following devices: iPhone 12, iPad Air (3rd generation), iPad Air 2 and iMac 27".
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Further tests were carried out using Chrome dev tools (toggle device tool bar) for the following devices (see screenshots below): 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<details>
+<summary>iPhone SE</summary>
 
-------
+![Chrome Dev Tools iPhone SE](/assets/images/iphonese.jpg)
 
-## FAQ about the uptime script
+</details>
 
-**Why have you added this script?**
+<details>
+<summary>Samsung Galaxy S8+</summary>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Chrome Dev Tools Samsung Galaxy S8+](/assets/images/galaxys8.jpg)
 
-**How will this affect me?**
+</details>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<details>
+<summary>Surface Pro 7</summary>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Chrome Dev Tools Samsung Galaxy S8+](/assets/images/surfacepro7.jpg)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+</details>
 
-**So….?**
+## Validation
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### HTML Validation
+- [W3 HTML Checker](https://validator.w3.org/nu/#textarea) was used repeatedly throughout the build of Love Art website to test all markup.
 
-**Can I opt out?**
+<details>
+<summary>Home</summary>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![W3 HTML Checker result for Home](/assets/images/home-html-checker.jpg)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+</details>
 
-**Anything more?**
+<details>
+<summary>Artwork</summary>
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![W3 HTML Checker result for Artwork](/assets/images/artwork-html-checker.jpg)
 
----
+</details>
 
-Happy coding!
+<details>
+<summary>Enrollment</summary>
+
+![W3 HTML Checker result for Enrollment](/assets/images/enrollment-html-checker.jpg)
+
+</details>
+
+### CSS Validation
+
+- [W3 CSS Checker](https://jigsaw.w3.org/css-validator/) was used repeatedly throughout the build of Love Art website to test all CSS.
+
+</details>
+
+<details>
+<summary>CSS Checker for style.css</summary>
+
+![W3 CSS Checker result for style.css](/assets/images/css-checker.jpg)
+
+</details>
+
+## Performance/Accessibility 
+
+Google Chrome Developer Tools Lighthouse feature was used to test Performance and Accessibility. 
+For the desktop version of Lighthouse a score over 90% were achieved for all pages and test categories. 
+For the mobile version of Lighthouse all pages apart from Enrollment received a score above 90%. The Enrollment page received an inital score in the 70% range. Lighthouse Opportunity section recommended optimising the size for image 'enrollment.jpeg' (700Kb). Using TinyPNG service 'enrollment.jpeg' was compressed to 400Kb and subsequent re-run of Lighthouse Mobile test achieved 82% performance score.
+
+One concern was for the readability of the text located on the Home page on the left hand side in the middle section advertising Drawing Walks. The background is not uniformly dark. However adding dropshadow to the text resolved this concern.
+
+### Lighthouse Desktop version test outcome
+
+<details>
+<summary>Home</summary>
+
+![Chrome Dev Tools Lighthouse output](/assets/images/home-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary>Artwork</summary>
+
+![Chrome Dev Tools Lighthouse output](/assets/images/artwork-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary>Enrollment</summary>
+
+![Chrome Dev Tools Lighthouse output](/assets/images/enrollment-lighthouse.jpg)
+
+</details>
+
+### Lighthouse Mobile version test outcome
+
+<details>
+<summary>Home</summary>
+
+![Chrome Dev Tools Lighthouse output](/assets/images/home-lighthouse-mobile.jpg)
+
+</details>
+
+<details>
+<summary>Artwork</summary>
+
+![Chrome Dev Tools Lighthouse output](/assets/images/artwork-lighthouse-mobile.jpg)
+
+</details>
+
+<details>
+<summary>Enrollment</summary>
+
+![Chrome Dev Tools Lighthouse output](/assets/images/enrollment-lighthouse-mobile.jpg)
+
+</details>
+
+## Deployment
+
+- Crossword was deployed via GitHub Pages. Please see deployment steps below:
+  - In the GitHub repository 'love-art', navigate to the Settings tab.
+  - From the 'Code and automation' section select 'Pages'.
+  - From the 'Branch' section select 'Main' and save.
+  - A live link is provided at the top of 'Pages'. The live link can be accessed here - [Love Art](https://sven-cork.github.io/love-art/).  
+
+
+
+## Credits
+
+### Images
+
+Images aquired from [Pexels](#pexels.com)
+
+1. drawing-walk-full.jpg/drawing-walk-full2.jpg (original name: pexels-ekaterina-bolovtsova-5037075.jpg) - by Ekaterine Bolovtsova<br>
+2. enrollment.jpeg (original name: pexels-hazy-mokhlas-47482.jpg) - by Hazy Mokhlas<br>
+3. hero-image6.jpg (original name: pexels-daian-gan-102127.jpg) - by Daian Gan<br>
+4. paint-group-full.jpg (original name: pexels-bruno-bueno-3861423.jpg) - by Bruno Bueno<br>
+
+Images located on the Artwork page belongs to the developer of Love Art.
+
+### Other
+
+Icons for social media links are from [Fontawesome](https://fontawesome.com/).
+
+Fonts used throughout Love Art website were imported from [Google Fonts](https://fonts.google.com/).
+
+Design style for hero-image with cover text mathing to the dominant tone and background color was influenced from Code Institute Love Running project.
+
+Inspiration for the crossword format and clues (original clue text changed for crossword) was borrowed from James Scalise [YouTube channel:](https://www.youtube.com/watch?v=_KunjDXYYYg&ab_channel=JamesScalise).
+      
