@@ -7,6 +7,7 @@ body {
 
 }
 
+/*crossword container*/
 #crossword-container {
     width: 250px;
     height: 250px;
@@ -73,18 +74,14 @@ body {
     width: 500px;
 }
 
-#fifthdiv {
+/*permanent black crossword tiles*/
+#fifth-div, #tenth-div, #sixteenth-div, #twentyfirst-div {
     background: black;
 }
 
-#tenthdiv {
-    background: black;
-}
-
-#sixteenthdiv {
-    background: black;
-}
-
-#twentyfirstdiv {
-    background: black;
+/*green border for correct answered tiles*/
+#first-key-input, #sixth-key-input, #eleventh-key-input {
+    border-color: green;
+    border-width: 10%;
+    border-style: solid;
 }

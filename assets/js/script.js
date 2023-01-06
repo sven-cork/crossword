@@ -1,6 +1,27 @@
-function correctCrossword() {
+function correctCrosswordAcross() {
     let correctCrossword = [['S','T','A','R'], ['H','O','P','E'], ['H','Y','P','E','R'], ['E','L','S','E'], ['D','E','E','M']];
     return correctCrossword;
+}
+
+function correctCrosswordDown() {
+    let correctCrossword = [['S','H','H'], ['T','O','Y','E','D'], ['A','P','P','L','E'], ['R','E','E','S','E'], ['R','E','M']];
+    return correctCrossword;
+}
+
+function checkFirstDown() {
+    let firstBoxValue = document.getElementById("first-key-input").value;
+    let sixthBoxValue = document.getElementById("sixth-key-input").value;
+    let eleventhBoxValue = document.getElementById("eleventh-key-input").value;
+    let firstDownWord = [firstBoxValue, sixthBoxValue, eleventhBoxValue];
+    console.log("Correct First Down Word: ", correctCrosswordDown()[0])
+    console.log("First Down Word: ", firstDownWord)
+
+    if (firstDownWord === correctCrosswordDown()[0]) {
+        console.log("Conditional triggered");
+        let answerBox = document.getElementById("correct-first-word-down").innerText;
+        console.log("User entered first down word is correct");
+        answerBox = "SHH";
+    } 
 }
 
 function compareEntries() {
@@ -50,6 +71,7 @@ function updateResult() {
     console.log(letterObject);
 
     compareEntries()
+    checkFirstDown()
 }
 
 document.getElementById("submit-button").addEventListener("click", updateResult);
