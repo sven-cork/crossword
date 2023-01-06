@@ -8,19 +8,28 @@ function correctCrosswordDown() {
     return correctCrossword;
 }
 
+function compareArrays(array1, array2) {
+    if (array1.toString() === array2.toString()) {
+        return true;
+    }
+}
+
 function checkFirstDown() {
     let firstBoxValue = document.getElementById("first-key-input").value;
     let sixthBoxValue = document.getElementById("sixth-key-input").value;
     let eleventhBoxValue = document.getElementById("eleventh-key-input").value;
-    let firstDownWord = [firstBoxValue, sixthBoxValue, eleventhBoxValue];
-    console.log("Correct First Down Word: ", correctCrosswordDown()[0])
-    console.log("First Down Word: ", firstDownWord)
+    let firstDownArray = [firstBoxValue, sixthBoxValue, eleventhBoxValue];
+    console.log("Correct First Down Word: ", correctCrosswordDown()[0]);
+    console.log("First Down Array: ", firstDownArray);
 
-    if (firstDownWord === correctCrosswordDown()[0]) {
+    if (compareArrays(correctCrosswordDown()[0], firstDownArray)) {
         console.log("Conditional triggered");
-        let answerBox = document.getElementById("correct-first-word-down").innerText;
+        let answerbox = document.getElementById("correct-first-word-down");
+        let firstDownWord = firstDownArray.join("");
+        answerbox.innerText = firstDownWord;
         console.log("User entered first down word is correct");
-        answerBox = "SHH";
+        console.log("First Down Word: ", firstDownWord)
+        
     } 
 }
 
