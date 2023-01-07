@@ -14,6 +14,7 @@ function compareArrays(array1, array2) {
     }
 }
 
+/**function checking letters entered for first vertical word agains correct answer*/
 function checkFirstDown() {
     let firstBoxValue = document.getElementById("first-key-input").value;
     let sixthBoxValue = document.getElementById("sixth-key-input").value;
@@ -24,20 +25,51 @@ function checkFirstDown() {
 
     if (compareArrays(correctCrosswordDown()[0], firstDownArray)) {
         console.log("Conditional triggered");
-        let answerbox = document.getElementById("correct-first-word-down");
+        let answerbox = document.getElementById("correct-word-box");
         let firstDownWord = firstDownArray.join("");
         answerbox.innerText = firstDownWord;
         console.log("User entered first down word is correct");
         console.log("First Down Word: ", firstDownWord)
 
         //Add green tick next to the clue for the word indicating correct word entered
-        let firstWordClue = document.getElementById("first-word-accros-clue");
-        firstWordClue.classList.add("fa-solid");
-        firstWordClue.classList.add("fa-check");
-        firstWordClue.classList.add("green-tic");
+        let firstWordDownClue = document.getElementById("first-word-down-clue");
+        firstWordDownClue.classList.add("fa-solid");
+        firstWordDownClue.classList.add("fa-check");
+        firstWordDownClue.classList.add("green-tic");
         
     } 
 }
+
+/**function checking letters entered for first vertical word agains correct answer*/
+function checkSecondDown() {
+    let secondBoxValue = document.getElementById("second-key-input").value;
+    let seventhBoxValue = document.getElementById("seventh-key-input").value;
+    let twelfththBoxValue = document.getElementById("twelfth-key-input").value;
+    let seventeenththBoxValue = document.getElementById("seventeenth-key-input").value;
+    let twentysecondBoxValue = document.getElementById("twentysecond-key-input").value;
+    let secondDownArray = [secondBoxValue, seventhBoxValue, twelfththBoxValue, seventeenththBoxValue, twentysecondBoxValue];
+    console.log("Correct Second Down Word: ", correctCrosswordDown()[1]);
+    console.log("Second Down Array: ", secondDownArray);
+
+    if (compareArrays(correctCrosswordDown()[1], secondDownArray)) {
+        console.log("Conditional triggered");
+        let answerbox = document.getElementById("correct-word-box");
+        let secondDownWord = secondDownArray.join("");
+        answerbox.innerText = secondDownWord;
+        console.log("User entered first down word is correct");
+        console.log("First Down Word: ", secondDownWord)
+
+        //Add green tick next to the clue for the word indicating correct word entered
+        let secondWordDownClue = document.getElementById("second-word-down-clue");
+        console.log("Adding green class to second word down clue");
+        secondWordDownClue.classList.add("fa-solid");
+        secondWordDownClue.classList.add("fa-check");
+        secondWordDownClue.classList.add("green-tic");
+        
+    } 
+}
+
+
 
 function compareEntries() {
     let correctFirstDown = {1 : "S", 2 : "H", 3 : "H"};
@@ -87,13 +119,20 @@ function updateResult() {
 
     compareEntries()
     checkFirstDown()
+    checkSecondDown()
 }
 
+/**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
-    let greenTickElements = document.getElementById("first-word-accros-clue");
-    greenTickElements.classList.remove("fa-solid");
-    greenTickElements.classList.remove("fa-check");
-    greenTickElements.classList.remove("green-tic");
+    let greenTickElement1 = document.getElementById("first-word-down-clue");
+    greenTickElement1.classList.remove("fa-solid");
+    greenTickElement1.classList.remove("fa-check");
+    greenTickElement1.classList.remove("green-tic");
+
+    let greenTickElement2 = document.getElementById("second-word-down-clue");
+    greenTickElement2.classList.remove("fa-solid");
+    greenTickElement2.classList.remove("fa-check");
+    greenTickElement2.classList.remove("green-tic");
 }
 
 document.getElementById("submit-button").addEventListener("click", updateResult);
