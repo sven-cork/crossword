@@ -4,7 +4,7 @@ function correctCrosswordAcross() {
 }
 
 function correctCrosswordDown() {
-    let correctCrossword = [['S','H','H'], ['T','O','Y','E','D'], ['A','P','P','L','E'], ['R','E','E','S','E'], ['R','E','M']];
+    let correctCrossword = [['S','S','H'], ['T','O','Y','E','D'], ['A','P','P','L','E'], ['R','E','E','S','E'], ['R','E','M']];
     return correctCrossword;
 }
 
@@ -20,25 +20,34 @@ function checkFirstDown() {
     let sixthBoxValue = document.getElementById("sixth-key-input").value;
     let eleventhBoxValue = document.getElementById("eleventh-key-input").value;
     let firstDownArray = [firstBoxValue, sixthBoxValue, eleventhBoxValue];
+    let answerbox = document.getElementById("correct-word-box");
+    console.log("First Box Value:", firstBoxValue);
+    let firstDownWord = firstDownArray.join("");
+    let firstWordDownClue = document.getElementById("first-word-down-clue");
     console.log("Correct First Down Word: ", correctCrosswordDown()[0]);
     console.log("First Down Array: ", firstDownArray);
 
     if (compareArrays(correctCrosswordDown()[0], firstDownArray)) {
         console.log("Conditional triggered");
-        let answerbox = document.getElementById("correct-word-box");
-        let firstDownWord = firstDownArray.join("");
+        
         answerbox.innerText = firstDownWord;
         console.log("User entered first down word is correct");
         console.log("First Down Word: ", firstDownWord)
 
         //Add green tick next to the clue for the word indicating correct word entered
-        let firstWordDownClue = document.getElementById("first-word-down-clue");
         firstWordDownClue.classList.add("fa-solid");
         firstWordDownClue.classList.add("fa-check");
         firstWordDownClue.classList.add("green-tic");
         
-    } 
+    } else if (firstDownWord != "") {
+        //Add red "x" next to the clue for the word entered incorrectly
+        firstWordDownClue.classList.add("fa-solid");
+        firstWordDownClue.classList.add("fa-xmark");
+        firstWordDownClue.classList.add("red-x");
+        console.log("Length of firdWordDownArray: ", firstDownArray);
+    }
 }
+
 
 /**function checking letters entered for first vertical word agains correct answer*/
 function checkSecondDown() {
@@ -48,25 +57,31 @@ function checkSecondDown() {
     let seventeenththBoxValue = document.getElementById("seventeenth-key-input").value;
     let twentysecondBoxValue = document.getElementById("twentysecond-key-input").value;
     let secondDownArray = [secondBoxValue, seventhBoxValue, twelfththBoxValue, seventeenththBoxValue, twentysecondBoxValue];
+    let answerbox = document.getElementById("correct-word-box");
+    let secondDownWord = secondDownArray.join("");
+    let secondWordDownClue = document.getElementById("second-word-down-clue");
     console.log("Correct Second Down Word: ", correctCrosswordDown()[1]);
     console.log("Second Down Array: ", secondDownArray);
 
     if (compareArrays(correctCrosswordDown()[1], secondDownArray)) {
         console.log("Conditional triggered");
-        let answerbox = document.getElementById("correct-word-box");
-        let secondDownWord = secondDownArray.join("");
+        
         answerbox.innerText = secondDownWord;
         console.log("User entered first down word is correct");
         console.log("First Down Word: ", secondDownWord)
 
         //Add green tick next to the clue for the word indicating correct word entered
-        let secondWordDownClue = document.getElementById("second-word-down-clue");
         console.log("Adding green class to second word down clue");
         secondWordDownClue.classList.add("fa-solid");
         secondWordDownClue.classList.add("fa-check");
         secondWordDownClue.classList.add("green-tic");
         
-    } 
+    } else if (secondDownWord != "") {
+        //Add red "x" next to the clue for the word entered incorrectly
+        secondWordDownClue.classList.add("fa-solid");
+        secondWordDownClue.classList.add("fa-xmark");
+        secondWordDownClue.classList.add("red-x");
+    }
 }
 
 
@@ -124,15 +139,26 @@ function updateResult() {
 
 /**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
-    let greenTickElement1 = document.getElementById("first-word-down-clue");
-    greenTickElement1.classList.remove("fa-solid");
-    greenTickElement1.classList.remove("fa-check");
-    greenTickElement1.classList.remove("green-tic");
+    let firstWordDownPassIcon = document.getElementById("first-word-down-clue");
+    firstWordDownPassIcon.classList.remove("fa-solid");
+    firstWordDownPassIcon.classList.remove("fa-check");
+    firstWordDownPassIcon.classList.remove("green-tic");
 
-    let greenTickElement2 = document.getElementById("second-word-down-clue");
-    greenTickElement2.classList.remove("fa-solid");
-    greenTickElement2.classList.remove("fa-check");
-    greenTickElement2.classList.remove("green-tic");
+    let firstWordDownFailIcon = document.getElementById("first-word-down-clue");
+    firstWordDownFailIcon.classList.remove("fa-solid");
+    firstWordDownFailIcon.classList.remove("fa-xmark");
+    firstWordDownFailIcon.classList.remove("red-x");
+
+    let secondWordDownPassIcon = document.getElementById("second-word-down-clue");
+    secondWordDownPassIcon.classList.remove("fa-solid");
+    secondWordDownPassIcon.classList.remove("fa-check");
+    secondWordDownPassIcon.classList.remove("green-tic");
+
+    let secondWordDownFailIcon = document.getElementById("second-word-down-clue");
+    secondWordDownFailIcon.classList.remove("fa-solid");
+    secondWordDownFailIcon.classList.remove("fa-xmark");
+    secondWordDownFailIcon.classList.remove("red-x");
+    
 }
 
 document.getElementById("submit-button").addEventListener("click", updateResult);

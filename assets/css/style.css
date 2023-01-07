@@ -107,6 +107,11 @@ footer i {
     color: green;
 }
 
+/*red "x" next to clue with corresponding incorrect entered word*/
+.red-x {
+    color: red;
+}
+
 .hide {
     display: none;
     visibility: hidden;
