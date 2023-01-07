@@ -139,7 +139,38 @@ function updateResult() {
 
 /**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
-    let firstWordDownPassIcon = document.getElementById("first-word-down-clue");
+
+    /*let iElements = document.getElementsByTagName("i");
+    console.log(iElements);
+    for (let element in iElements) {*/
+    
+
+    /*credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
+    console.log("Start reset button");
+    let iElements = document.querySelectorAll('i');
+
+    iElements.forEach((element) => {
+    element.classList.remove('fa-solid', 'fa-check', 'green-tic', 'fa-xmark', 'red-x');
+    });
+    console.log("End reset button");
+}
+    /*Array.from(document.querySelectorAll('.fa-solid')).forEach((el) => el.classList.remove('.fa-solid'));
+    Array.from(document.querySelectorAll('.fa-check')).forEach((el) => el.classList.remove('.fa-check'));
+    Array.from(document.querySelectorAll('.green-tic')).forEach((el) => el.classList.remove('.green-tic'));
+    console.log("End reset button");  */
+
+    /*document.querySelector(".fa-solid")?.classList.remove(".fa-solid");
+    document.querySelector(".fa-check")?.classList.remove(".fa-check");
+    document.querySelector(".green-tic")?.classList.remove(".green-tic");
+    console.log("End reset button");   */
+
+        /*element.classList.remove("fa-solid");
+        element.classList.remove("fa-solid");
+        element.classList.remove("fa-check");
+        element.classList.remove("fa-xmark");
+        element.classList.remove("red-x");*/
+    
+    /*let firstWordDownPassIcon = document.getElementById("first-word-down-clue");
     firstWordDownPassIcon.classList.remove("fa-solid");
     firstWordDownPassIcon.classList.remove("fa-check");
     firstWordDownPassIcon.classList.remove("green-tic");
@@ -157,9 +188,9 @@ function resetAll() {
     let secondWordDownFailIcon = document.getElementById("second-word-down-clue");
     secondWordDownFailIcon.classList.remove("fa-solid");
     secondWordDownFailIcon.classList.remove("fa-xmark");
-    secondWordDownFailIcon.classList.remove("red-x");
+    secondWordDownFailIcon.classList.remove("red-x");*/
     
-}
+
 
 document.getElementById("submit-button").addEventListener("click", updateResult);
 document.getElementById("reset-button").addEventListener("click", resetAll);
