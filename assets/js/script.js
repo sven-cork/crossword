@@ -16,12 +16,11 @@ function compareArrays(array1, array2) {
 
 /**function checking letters entered for first vertical word agains correct answer*/
 function checkFirstDown() {
-    let firstBoxValue = document.getElementById("first-key-input").value;
-    let sixthBoxValue = document.getElementById("sixth-key-input").value;
-    let eleventhBoxValue = document.getElementById("eleventh-key-input").value;
-    let firstDownArray = [firstBoxValue, sixthBoxValue, eleventhBoxValue];
+    let firstTile = document.getElementById("first-key-input");
+    let sixthTile = document.getElementById("sixth-key-input");
+    let eleventhTile = document.getElementById("eleventh-key-input");
+    let firstDownArray = [firstTile.value, sixthTile.value, eleventhTile.value];
     let answerbox = document.getElementById("correct-word-box");
-    console.log("First Box Value:", firstBoxValue);
     let firstDownWord = firstDownArray.join("");
     let firstWordDownClue = document.getElementById("first-word-down-clue");
     console.log("Correct First Down Word: ", correctCrosswordDown()[0]);
@@ -38,25 +37,38 @@ function checkFirstDown() {
         firstWordDownClue.classList.add("fa-solid");
         firstWordDownClue.classList.add("fa-check");
         firstWordDownClue.classList.add("green-tic");
-        
+
+        //Add green border for the tiles holding letters comprising the correct word
+        firstTile.classList.add('green-border')
+        sixthTile.classList.add('green-border')
+        eleventhTile.classList.add('green-border')
+      
+      //user entered word is not corresponding to correct word and user enter word is not empty 
     } else if (firstDownWord != "") {
-        //Add red "x" next to the clue for the word entered incorrectly
+        //add red "x" next to the clue for the word entered incorrectly
         firstWordDownClue.classList.add("fa-solid");
         firstWordDownClue.classList.add("fa-xmark");
         firstWordDownClue.classList.add("red-x");
-        console.log("Length of firdWordDownArray: ", firstDownArray);
+        console.log("Length of firstDownArray: ", firstDownArray);
+
+        //add red border around tiles for user incorrec answered word
+        firstTile.classList.add('red-border')
+        sixthTile.classList.add('red-border')
+        eleventhTile.classList.add('red-border')
+
+
     }
 }
 
 
 /**function checking letters entered for first vertical word agains correct answer*/
 function checkSecondDown() {
-    let secondBoxValue = document.getElementById("second-key-input").value;
-    let seventhBoxValue = document.getElementById("seventh-key-input").value;
-    let twelfththBoxValue = document.getElementById("twelfth-key-input").value;
-    let seventeenththBoxValue = document.getElementById("seventeenth-key-input").value;
-    let twentysecondBoxValue = document.getElementById("twentysecond-key-input").value;
-    let secondDownArray = [secondBoxValue, seventhBoxValue, twelfththBoxValue, seventeenththBoxValue, twentysecondBoxValue];
+    let secondTile = document.getElementById("second-key-input");
+    let seventhTile = document.getElementById("seventh-key-input");
+    let twelfthTile = document.getElementById("twelfth-key-input");
+    let seventeenthTile = document.getElementById("seventeenth-key-input");
+    let twentysecondTile = document.getElementById("twentysecond-key-input");
+    let secondDownArray = [secondTile.value, seventhTile.value, twelfthTile.value, seventeenthTile.value, twentysecondTile.value];
     let answerbox = document.getElementById("correct-word-box");
     let secondDownWord = secondDownArray.join("");
     let secondWordDownClue = document.getElementById("second-word-down-clue");
@@ -70,12 +82,19 @@ function checkSecondDown() {
         console.log("User entered first down word is correct");
         console.log("First Down Word: ", secondDownWord)
 
-        //Add green tick next to the clue for the word indicating correct word entered
+        //Add green check next to the clue for the word indicating correct word entered
         console.log("Adding green class to second word down clue");
         secondWordDownClue.classList.add("fa-solid");
         secondWordDownClue.classList.add("fa-check");
         secondWordDownClue.classList.add("green-tic");
-        
+
+        //Add green border for the tiles holding letters comprising the correct word
+        secondTile.classList.add('green-border')
+        seventhTile.classList.add('green-border')
+        twelfthTile.classList.add('green-border')
+        seventeenthTile.classList.add('green-border')
+        twentysecondTile.classList.add('green-border')
+
     } else if (secondDownWord != "") {
         //Add red "x" next to the clue for the word entered incorrectly
         secondWordDownClue.classList.add("fa-solid");
@@ -139,13 +158,19 @@ function updateResult() {
 
 /**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
-
-    /*let iElements = document.getElementsByTagName("i");
-    console.log(iElements);
-    for (let element in iElements) {*/
     
+    /*remove green borders around letters corresponding to correct words
+    credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
+    console.log("Start reset button border removal");
+    let inputElements = document.querySelectorAll('input');
 
-    /*credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
+    inputElements.forEach((element) => {
+    element.classList.remove('green-border');
+    });
+    console.log("End reset button for border removal");
+
+    /*remove green checks and red "x" marks when pressing reset button
+    credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
     console.log("Start reset button");
     let iElements = document.querySelectorAll('i');
 

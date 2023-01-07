@@ -107,12 +107,21 @@ footer i {
     color: green;
 }
 
+/*green border around tile with letter entered for correct word*/
+.green-border {
+    border-width: 3px;
+    border-style: solid;
+    border-color: green;
+}
+
 /*red "x" next to clue with corresponding incorrect entered word*/
 .red-x {
     color: red;
 }
 
-.hide {
-    display: none;
-    visibility: hidden;
+/*red border around tiles belonging to word incorrectly entered by user*/
+.red-border {
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
 }
