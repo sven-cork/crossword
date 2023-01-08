@@ -192,6 +192,10 @@ function resetAll() {
     element.classList.remove('green-border', 'red-border', 'fa-solid', 'fa-check', 'green-tic', 'fa-xmark', 'red-x');
     });
     console.log("End reset button for border removal");
+
+    let secondTile = document.getElementById("second-key-input");
+    secondTile.value = "";
+    console.log("Second tile content: ");
 }
 
     
