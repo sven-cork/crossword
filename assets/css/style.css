@@ -17,6 +17,18 @@ body {
     margin-right: 5%;
 }
 
+
+p, p > i {
+    font-style: normal;
+    font: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*green color applied to correctly answered words displayed*/
+#correct-answer-display-box {
+    color: darkgreen;
+}
+
 .flex-container-crossword {
     display: flex;
     flex-direction: row;
@@ -124,4 +136,9 @@ footer i {
     border-width: 3px;
     border-style: solid;
     border-color: red;
+}
+
+/*answer box to display correctly entered words*/
+#correct-answer-display-box {
+    height: 50px;
 }

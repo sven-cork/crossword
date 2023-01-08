@@ -42,6 +42,11 @@ function checkFirstDown() {
         firstTile.classList.add('green-border')
         sixthTile.classList.add('green-border')
         eleventhTile.classList.add('green-border')
+
+        //Add correctly entered word to be displayed in correct answer box
+        let correctAnswerBox = document.getElementById('correct-answer-display-box');
+        correctAnswerBox.innerHTML += (firstDownWord + "<br>");
+        
       
       //user entered word is not corresponding to correct word and user enter word is not empty 
     } else if (firstDownWord != "") {
@@ -55,6 +60,10 @@ function checkFirstDown() {
         firstTile.classList.add('red-border')
         sixthTile.classList.add('red-border')
         eleventhTile.classList.add('red-border')
+
+        //Add incorrectly entered word to be displayed in incorrect answer box
+        let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
+        incorrectAnswerBox.innerHTML += (firstDownWord + "<br>");
 
 
     }
@@ -89,17 +98,31 @@ function checkSecondDown() {
         secondWordDownClue.classList.add("green-tic");
 
         //Add green border for the tiles holding letters comprising the correct word
-        secondTile.classList.add('green-border')
-        seventhTile.classList.add('green-border')
-        twelfthTile.classList.add('green-border')
-        seventeenthTile.classList.add('green-border')
-        twentysecondTile.classList.add('green-border')
+        secondTile.classList.add('green-border');
+        seventhTile.classList.add('green-border');
+        twelfthTile.classList.add('green-border');
+        seventeenthTile.classList.add('green-border');
+        twentysecondTile.classList.add('green-border');
+
+        let correctAnswerBox = document.getElementById('correct-answer-display-box');
+        correctAnswerBox.innerHTML += secondDownWord;
 
     } else if (secondDownWord != "") {
         //Add red "x" next to the clue for the word entered incorrectly
         secondWordDownClue.classList.add("fa-solid");
         secondWordDownClue.classList.add("fa-xmark");
         secondWordDownClue.classList.add("red-x");
+
+        //add red border around tiles for user incorrec answered word
+        secondTile.classList.add('red-border');
+        seventhTile.classList.add('red-border');
+        twelfthTile.classList.add('red-border');
+        seventeenthTile.classList.add('red-border');
+        twentysecondTile.classList.add('red-border');
+
+        //Add incorrectly entered word to be displayed in incorrect answer box
+        let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
+        incorrectAnswerBox.innerHTML += (secondDownWord + "<br>");
     }
 }
 
@@ -159,61 +182,18 @@ function updateResult() {
 /**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
     
-    /*remove green borders around letters corresponding to correct words
+    /*remove green and red borders around letters corresponding to correct words
+    remove green check marks and rex "x" marks for correct and incorrectly entered words
     credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
     console.log("Start reset button border removal");
-    let inputElements = document.querySelectorAll('input');
+    let inputElements = document.querySelectorAll('input, i');
 
     inputElements.forEach((element) => {
-    element.classList.remove('green-border');
+    element.classList.remove('green-border', 'red-border', 'fa-solid', 'fa-check', 'green-tic', 'fa-xmark', 'red-x');
     });
     console.log("End reset button for border removal");
-
-    /*remove green checks and red "x" marks when pressing reset button
-    credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
-    console.log("Start reset button");
-    let iElements = document.querySelectorAll('i');
-
-    iElements.forEach((element) => {
-    element.classList.remove('fa-solid', 'fa-check', 'green-tic', 'fa-xmark', 'red-x');
-    });
-    console.log("End reset button");
 }
-    /*Array.from(document.querySelectorAll('.fa-solid')).forEach((el) => el.classList.remove('.fa-solid'));
-    Array.from(document.querySelectorAll('.fa-check')).forEach((el) => el.classList.remove('.fa-check'));
-    Array.from(document.querySelectorAll('.green-tic')).forEach((el) => el.classList.remove('.green-tic'));
-    console.log("End reset button");  */
 
-    /*document.querySelector(".fa-solid")?.classList.remove(".fa-solid");
-    document.querySelector(".fa-check")?.classList.remove(".fa-check");
-    document.querySelector(".green-tic")?.classList.remove(".green-tic");
-    console.log("End reset button");   */
-
-        /*element.classList.remove("fa-solid");
-        element.classList.remove("fa-solid");
-        element.classList.remove("fa-check");
-        element.classList.remove("fa-xmark");
-        element.classList.remove("red-x");*/
-    
-    /*let firstWordDownPassIcon = document.getElementById("first-word-down-clue");
-    firstWordDownPassIcon.classList.remove("fa-solid");
-    firstWordDownPassIcon.classList.remove("fa-check");
-    firstWordDownPassIcon.classList.remove("green-tic");
-
-    let firstWordDownFailIcon = document.getElementById("first-word-down-clue");
-    firstWordDownFailIcon.classList.remove("fa-solid");
-    firstWordDownFailIcon.classList.remove("fa-xmark");
-    firstWordDownFailIcon.classList.remove("red-x");
-
-    let secondWordDownPassIcon = document.getElementById("second-word-down-clue");
-    secondWordDownPassIcon.classList.remove("fa-solid");
-    secondWordDownPassIcon.classList.remove("fa-check");
-    secondWordDownPassIcon.classList.remove("green-tic");
-
-    let secondWordDownFailIcon = document.getElementById("second-word-down-clue");
-    secondWordDownFailIcon.classList.remove("fa-solid");
-    secondWordDownFailIcon.classList.remove("fa-xmark");
-    secondWordDownFailIcon.classList.remove("red-x");*/
     
 
 
