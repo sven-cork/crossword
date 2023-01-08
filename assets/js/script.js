@@ -29,9 +29,9 @@ function checkFirstDown() {
     if (compareArrays(correctCrosswordDown()[0], firstDownArray)) {
         console.log("Conditional triggered");
         
-        answerbox.innerText = firstDownWord;
+        /*answerbox.innerText = firstDownWord;
         console.log("User entered first down word is correct");
-        console.log("First Down Word: ", firstDownWord)
+        console.log("First Down Word: ", firstDownWord)*/
 
         //Add green tick next to the clue for the word indicating correct word entered
         firstWordDownClue.classList.add("fa-solid");
@@ -87,9 +87,9 @@ function checkSecondDown() {
     if (compareArrays(correctCrosswordDown()[1], secondDownArray)) {
         console.log("Conditional triggered");
         
-        answerbox.innerText = secondDownWord;
+        /*answerbox.innerText = secondDownWord;
         console.log("User entered first down word is correct");
-        console.log("First Down Word: ", secondDownWord)
+        console.log("First Down Word: ", secondDownWord)*/
 
         //Add green check next to the clue for the word indicating correct word entered
         console.log("Adding green class to second word down clue");
@@ -166,7 +166,7 @@ function updateResult() {
     let divNumber = document.getElementById("first-divsub").textContent;
     console.log("Div Number:", divNumber);
     console.log("keyPress", firstKeyPressed);
-    document.getElementById("key-result").innerText = firstKeyPressed;
+    //document.getElementById("key-result").innerText = firstKeyPressed;
     letterList.push(firstKeyPressed);
     console.log("start of project2");
     console.log(letterList);

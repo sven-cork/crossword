@@ -10,9 +10,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <header>
+        <a href="index.html">
+            <h1 id="crossword_logo">Crossword</h1>
+        </a>
+        
+    </header>    
+    <!--<div>
     <h1 id="game-name">Simple Crossword</h1>
-    <div>
+    <div>-->
         <!--crossword container -->
         <div id="crossword-container" class="flex-container-crossword">
             <!--first row -->
@@ -33,6 +39,7 @@
                 <input id="fourth-key-input" class="input-box" type="text">
             </div>
             <div id="fifth-div" class="flex-item-blue">5</div>
+            
             <!--second row -->
             <div id="sixth-div" class="flex-item-blue">
                 <div id="sixth-divsub" class="number-div">6</div>
@@ -108,17 +115,21 @@
                 <div id="twentyfifth-divsub" class="number-div">25</div>
                 <input id="twentyfifth-key-input" class="input-box" type="text">
             </div>
+            <div id="div-holding-buttons" class="button-container">
+                <button id="submit-button" class="buttons">Submit</button>
+                <button id="reset-button" class="buttons">Reset</button>
+                <button id="rules-button" class="buttons">Rules</button>
+            </div>
         </div>
     </div>
     
-    <!-- container for returned correct results, submit and reset button-->
+    <!-- container for returned correct results, submit and reset button
     <div id="timer-result">
         <p>Key pressed: <span id="key-result">None</span></p>
         <p>Correct word: <span id="correct-word-box">None</span></p>
-        <button id="submit-button">Submit</button>
-        <button id="reset-button">Reset</button>
+        
 
-    </div>
+    </div>-->
 
 
     </div>
@@ -129,7 +140,7 @@
     <div class="flex-container-clues">
         <div id="across-clues">
             <h3>Across:</h3>
-            <p class="clues-paragraph"><span><i id="first-word-accros-clue"></i></span> 1. Shining bright on the sky</p>
+            <p class="clues-paragraph"><span><i id="first-word-accros-clue"></i></span> 1. Twinkling in the night sky</p>
             <p class="clues-paragraph">6. The last thing that leaves us</p>
             <p class="clues-paragraph">11. Being very intense</p>
             <p class="clues-paragraph">17. In conditional comes after if</p>
@@ -138,13 +149,13 @@
         </div>
         <div id="vertical-clues">
             <h3>Vertical:</h3>
-            <p class="clues-paragraph"><span><i id="first-word-down-clue"></i></span> 1. Network protocol to access computer over network</p>
-            <p class="clues-paragraph"><span><i id="second-word-down-clue"></i></span> 2. Another way to express "played with the idea"</p>
-            <p class="clues-paragraph">3. Company manufacturing the world's most used smartphone</p>
-            <p class="clues-paragraph">4. Firstname of female actress and producer Mrs. Witherspoon</p>
+            <p class="clues-paragraph"><span><i id="first-word-down-clue"></i></span> 1. Network protocol to access computer</p>
+            <p class="clues-paragraph"><span><i id="second-word-down-clue"></i></span> 2. Alternative expression to "played with the idea"</p>
+            <p class="clues-paragraph">3. Name of business developing macOS</p>
+            <p class="clues-paragraph">4. Firstname of actress Mrs. Witherspoon</p>
             <p class="clues-paragraph">5. One of the sleep cycles</p>
         </div>
-        <div>
+        <div id="correct-incorrect-answers-container">
             <h3>Correct:</h3>
             <p id="correct-answer-display-box" class="answers-paragraph"></p>
 
