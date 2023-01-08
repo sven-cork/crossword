@@ -191,14 +191,23 @@ function resetAll() {
     inputElements.forEach((element) => {
     element.classList.remove('green-border', 'red-border', 'fa-solid', 'fa-check', 'green-tic', 'fa-xmark', 'red-x');
     });
-    console.log("End reset button for border removal");
-
-    let secondTile = document.getElementById("second-key-input");
-    secondTile.value = "";
-    console.log("Second tile content: ");
-}
-
     
+    
+    /*remove user entered letters from crossword tiles*/    
+    let userEnteredLetters = document.querySelectorAll('input');
+
+    userEnteredLetters.forEach((element) => {
+    element.value = "";
+    });
+    
+    /*remove correct and incorrect words displayed entered by user*/
+    let correctDisplayedAnswers = document.getElementById('correct-answer-display-box');
+    correctDisplayedAnswers.innerText = "";
+
+    let incorrectDisplayedAnswers = document.getElementById('incorrect-answer-display-box');
+    incorrectDisplayedAnswers.innerText = "";
+
+}   
 
 
 document.getElementById("submit-button").addEventListener("click", updateResult);
