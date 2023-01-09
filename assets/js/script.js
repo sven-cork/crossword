@@ -62,8 +62,8 @@ function userEnteredWordsDown() {
         console.log("Enter outer loop: ");
         for (let letter = 0; letter < userEnteredDownWordsArray[item].length; letter++) {
             console.log("Enter inner loop");
-            console.log("Letter: ", item[letter]);
-            word += userEnteredDownWordsArray[item][letter];
+            console.log("Letter: ", userEnteredDownWordsArray[item][letter]);
+            word += userEnteredDownWordsArray[item][letter].toUpperCase();
         //upperCaseWord = word.toUpperCase();
         }
         console.log("upperCaseWord triggered");
