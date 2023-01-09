@@ -10,6 +10,12 @@ h1 {
     text-decoration: none;
 }
 
+#background-div {
+    height: 100%;
+    width: 100%;
+    background: url('../images/crossword.jpg') no-repeat center center;
+}
+
 #game-name {
     margin-left: 10%;
 
@@ -190,7 +196,7 @@ footer i {
 
 /*container holding incorrect/correct answers boxes*/
 #correct-incorrect-answers-container {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     height: 250px;
 }
 
