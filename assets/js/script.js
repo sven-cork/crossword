@@ -8,23 +8,54 @@ function correctCrosswordDown() {
     return correctCrossword;
 }
 
+/**compare user entered words down against correct crossword words down */
 function compareArraysDown(array1, array2) {
 
     console.log("compareArraysDown function triggered");
-    let firstWordDownClue = document.getElementById("first-word-down-clue");
-    let correctAnswerBox = document.getElementById('correct-answer-display-box');
+    
     
     for (let firstElementIndex = 0; firstElementIndex < array1.length; firstElementIndex++) {
-        
+
+        let correctAnswerBox = document.getElementById('correct-answer-display-box');
+        let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
+
+        //checks if user entered word down based on index corresponds to correct crossword down by same index
         if (array1[firstElementIndex] === array2[firstElementIndex]) {
             console.log("First element index item is: ", array1[firstElementIndex])
 
-            correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
-
+            //checks if correct answered word already exist in correct section
+            if (correctAnswerBox.textContent.includes((array1[firstElementIndex]))) {
+                continue;
+            } else {
+                correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
+            }
+            
+            //adds green check for correct entered word down to corresponding clue
             if (firstElementIndex === 0) {
+                let firstWordDownClue = document.getElementById("first-word-down-clue");
                 firstWordDownClue.classList.add("fa-solid");
                 firstWordDownClue.classList.add("fa-check");
                 firstWordDownClue.classList.add("green-tic");
+            } else if (firstElementIndex === 1) {
+                let secondWordDownClue = document.getElementById("second-word-down-clue");
+                secondWordDownClue.classList.add("fa-solid");
+                secondWordDownClue.classList.add("fa-check");
+                secondWordDownClue.classList.add("green-tic");
+            } else if (firstElementIndex === 2) {
+                let thirdWordDownClue = document.getElementById("third-word-down-clue");
+                thirdWordDownClue.classList.add("fa-solid");
+                thirdWordDownClue.classList.add("fa-check");
+                thirdWordDownClue.classList.add("green-tic");
+            } else if (firstElementIndex === 3) {
+                let fourthWordDownClue = document.getElementById("fourth-word-down-clue");
+                fourthWordDownClue.classList.add("fa-solid");
+                fourthWordDownClue.classList.add("fa-check");
+                fourthWordDownClue.classList.add("green-tic");
+            } else if (firstElementIndex === 4) {
+                let fifthWordDownClue = document.getElementById("fifth-word-down-clue");
+                fifthWordDownClue.classList.add("fa-solid");
+                fifthWordDownClue.classList.add("fa-check");
+                fifthWordDownClue.classList.add("green-tic");
             }
             
             
@@ -33,7 +64,45 @@ function compareArraysDown(array1, array2) {
             firstWordDownClue.classList.add("fa-check");
             firstWordDownClue.classList.add("green-tic");*/
 
+          //answered word is not correct
+        } else if (array1[firstElementIndex] != "") {
+            
+            //checks if correct answered word already exist in correct section
+            if (incorrectAnswerBox.textContent.includes((array1[firstElementIndex]))) {
+                continue;  
+            } else {
+                //adds incorrect answered word to 
+                incorrectAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
+            }
+            
 
+            //adds red "x" for incorrect entered down word to corresponding clue
+            if (firstElementIndex === 0) {
+                let firstWordDownClue = document.getElementById("first-word-down-clue");
+                firstWordDownClue.classList.add("fa-solid");
+                firstWordDownClue.classList.add("fa-xmark");
+                firstWordDownClue.classList.add("red-x");
+            } else if (firstElementIndex === 1) {
+                let secondWordDownClue = document.getElementById("second-word-down-clue");
+                secondWordDownClue.classList.add("fa-solid");
+                secondWordDownClue.classList.add("fa-xmark");
+                secondWordDownClue.classList.add("red-x");
+            } else if (firstElementIndex === 2) {
+                let thirdWordDownClue = document.getElementById("third-word-down-clue");
+                thirdWordDownClue.classList.add("fa-solid");
+                thirdWordDownClue.classList.add("fa-xmark");
+                thirdWordDownClue.classList.add("red-x");
+            } else if (firstElementIndex === 3) {
+                let fourthWordDownClue = document.getElementById("fourth-word-down-clue");
+                fourthWordDownClue.classList.add("fa-solid");
+                fourthWordDownClue.classList.add("fa-xmark");
+                fourthWordDownClue.classList.add("red-x");
+            } else if (firstElementIndex === 4) {
+                let fifthWordDownClue = document.getElementById("fifth-word-down-clue");
+                fifthWordDownClue.classList.add("fa-solid");
+                fifthWordDownClue.classList.add("fa-xmark");
+                fifthWordDownClue.classList.add("red-x");
+            }
         }
     }
 
