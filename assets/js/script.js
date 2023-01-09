@@ -14,6 +14,69 @@ function compareArrays(array1, array2) {
     }
 }
 
+/**get user entered words across */
+function userEnteredWordsDown() {
+    let firstTile = document.getElementById("first-key-input").value;
+    let secondTile = document.getElementById("second-key-input").value;
+    let thirdTile = document.getElementById("third-key-input").value;
+    let fourthTile = document.getElementById("fourth-key-input").value;
+    let sixthTile = document.getElementById("sixth-key-input").value;
+    let seventhTile = document.getElementById("seventh-key-input").value;
+    let eightTile = document.getElementById("eighth-key-input").value;
+    let ninethTile = document.getElementById("nineth-key-input").value;
+    let eleventhTile = document.getElementById("eleventh-key-input").value;
+    let twelfthTile = document.getElementById("twelfth-key-input").value;
+    let thirteenthTile = document.getElementById("thirteenth-key-input").value;
+    let fourteenthTile = document.getElementById("fourteenth-key-input").value;
+    let fifthteenthTile = document.getElementById("fifteenth-key-input").value;
+    let seventeenthTile = document.getElementById("seventeenth-key-input").value;
+    let eighteenthTile = document.getElementById("eighteen-key-input").value;
+    let nineteenthTile = document.getElementById("nineteenth-key-input").value;
+    let twentiethTile = document.getElementById("twentieth-key-input").value;
+    let twentysecondTile = document.getElementById("twentysecond-key-input").value;
+    let twentyhirdTile = document.getElementById("twentythird-key-input").value;
+    let twentyfourth = document.getElementById("twentyfourth-key-input").value;
+    let twentyfifth = document.getElementById("twentyfifth-key-input").value;
+    
+
+    let userEnteredDownWordsArray = [[firstTile, sixthTile, eleventhTile], [secondTile, seventhTile, twelfthTile, seventeenthTile, twentysecondTile], [thirdTile, eightTile, thirteenthTile, eighteenthTile, twentyhirdTile], [fourthTile, ninethTile, fourteenthTile, nineteenthTile, twentyfourth], [fifthteenthTile, twentiethTile, twentyfifth]];
+    console.log("User entered down array word 1 to 3: ", userEnteredDownWordsArray[0], userEnteredDownWordsArray[1], userEnteredDownWordsArray[2])
+
+    let userEnteredDownWordsList = [];
+    
+
+    /*for (let item = 0; item < userEnteredDownWordsArray.length; item++) {
+        let word = "";
+        console.log("Enter outer loop: ");
+        for (let letter = 0; letter < userEnteredDownWordsArray[item].length; letter++) {
+            console.log("Enter inner loop");
+            word += userEnteredDownWordsArray[item][letter];
+        upperCaseWord = word.toUpperCase();
+        console.log("upperCaseWord triggered");
+        userEnteredDownWordsList.push(upperCaseWord);
+        }}*/
+
+    for (let item = 0; item < userEnteredDownWordsArray.length; item++) {
+        let word = "";
+        
+        console.log("Enter outer loop: ");
+        for (let letter = 0; letter < userEnteredDownWordsArray[item].length; letter++) {
+            console.log("Enter inner loop");
+            console.log("Letter: ", item[letter]);
+            word += userEnteredDownWordsArray[item][letter];
+        //upperCaseWord = word.toUpperCase();
+        }
+        console.log("upperCaseWord triggered");
+        userEnteredDownWordsList.push(word);
+        console.log("Word: ", word);
+        console.log("userEnteredDownWordsList: ", userEnteredDownWordsList);
+    
+    }
+    
+
+    console.log("User entered word down from unified function: ", userEnteredDownWordsList)
+}
+
 /**function checking letters entered for first vertical word agains correct answer*/
 function checkFirstDown() {
     let firstTile = document.getElementById("first-key-input");
@@ -183,36 +246,6 @@ function checkThirdDown() {
 }
 
 
-function compareEntries() {
-    let correctFirstDown = {1 : "S", 2 : "H", 3 : "H"};
-
-    let userEnteredFirstDown = {}
-
-    //User entered value and cell number for first cell
-    let firstKeyPressed = document.getElementById("first-key-input").value;
-    let firstDivNumber = document.getElementById("first-divsub").textContent;
-    console.log("Div Number from compareEntries function:", firstDivNumber);
-    if (firstKeyPressed === "E") {
-        let correctAnswer = correctCrossword();
-        console.log("List of answered being displayed below:");
-        console.log(correctAnswer);
-        console.log("Displaying first letter in list below:");
-        console.log(correctAnswer[0][0]);
-    }
-
-    //User entered value and cell number for second cell
-    let secondKeyPressed = document.getElementById("sixth-key-input").value;
-    let secondDivNumber = document.getElementById("sixth-divsub").textContent;
-    console.log("Div Number from compareEntries function:", secondDivNumber);
-
-    //User entered value and cell number for third cell
-    let thirdKeyPressed = document.getElementById("eleventh-key-input").value;
-    let thirdDivNumber = document.getElementById("eleventh-divsub").textContent;
-    console.log("Div Number from compareEntries function:", thirdDivNumber);
-
-    console.log(correctFirstDown);
-}
-
 function updateResult() {
     let letterList = [];
     let letterObject = {First:"something"}
@@ -228,8 +261,8 @@ function updateResult() {
     console.log("letterList logged?")
     letterObject.divNumber = firstKeyPressed;
     console.log(letterObject);
-
-    compareEntries()
+    
+    userEnteredWordsDown()
     checkFirstDown()
     checkSecondDown()
     checkThirdDown()
