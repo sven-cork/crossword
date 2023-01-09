@@ -126,6 +126,61 @@ function checkSecondDown() {
     }
 }
 
+/**function checking letters entered for first vertical word agains correct answer*/
+function checkThirdDown() {
+    let thirdTile = document.getElementById("third-key-input");
+    let eightTile = document.getElementById("eighth-key-input");
+    let thirteenthTile = document.getElementById("thirteenth-key-input");
+    let eighteenthTile = document.getElementById("eighteen-key-input");
+    let twentyhirdTile = document.getElementById("twentythird-key-input");
+    let thirdDownArray = [thirdTile.value, eightTile.value, thirteenthTile.value, eighteenthTile.value, twentyhirdTile.value];
+    //let answerbox = document.getElementById("correct-word-box");
+    let thirdDownWord = thirdDownArray.join("");
+    let thirdWordDownClue = document.getElementById("third-word-down-clue");
+    console.log("Correct Third Down Word: ", correctCrosswordDown()[1]);
+    console.log("Third Down Array: ", thirdDownArray);
+
+    if (compareArrays(correctCrosswordDown()[2], thirdDownArray)) {
+        console.log("Conditional triggered");
+        
+        /*answerbox.innerText = secondDownWord;
+        console.log("User entered first down word is correct");
+        console.log("First Down Word: ", secondDownWord)*/
+
+        //Add green check next to the clue for the word indicating correct word entered
+        console.log("Adding green class to second word down clue");
+        thirdWordDownClue.classList.add("fa-solid");
+        thirdWordDownClue.classList.add("fa-check");
+        thirdWordDownClue.classList.add("green-tic");
+
+        /*Add green border for the tiles holding letters comprising the correct word
+        secondTile.classList.add('green-border');
+        seventhTile.classList.add('green-border');
+        twelfthTile.classList.add('green-border');
+        seventeenthTile.classList.add('green-border');
+        twentysecondTile.classList.add('green-border');*/
+
+        let correctAnswerBox = document.getElementById('correct-answer-display-box');
+        correctAnswerBox.innerHTML += thirdDownWord;
+
+    } else if (thirdDownWord != "") {
+        //Add red "x" next to the clue for the word entered incorrectly
+        thirdWordDownClue.classList.add("fa-solid");
+        thirdWordDownClue.classList.add("fa-xmark");
+        thirdWordDownClue.classList.add("red-x");
+
+        /*add red border around tiles for user incorrec answered word
+        secondTile.classList.add('red-border');
+        seventhTile.classList.add('red-border');
+        twelfthTile.classList.add('red-border');
+        seventeenthTile.classList.add('red-border');
+        twentysecondTile.classList.add('red-border');*/
+
+        //Add incorrectly entered word to be displayed in incorrect answer box
+        let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
+        incorrectAnswerBox.innerHTML += (thirdDownWord + "<br>");
+    }
+}
 
 
 function compareEntries() {
@@ -177,6 +232,7 @@ function updateResult() {
     compareEntries()
     checkFirstDown()
     checkSecondDown()
+    checkThirdDown()
 }
 
 /**Removes green checks for all correct answers and green tile outlines */
