@@ -40,12 +40,14 @@ p, p > i {
 #correct-answer-display-box {
     color: darkgreen;
     font-weight: 700;
+    height: 75px;
 }
 
 /*red color applied to correctly answered words displayed*/
 #incorrect-answer-display-box {
     color: darkred;
     font-weight: 700;
+    height: 125px;
 }
 
 .flex-container-crossword {
@@ -193,8 +195,8 @@ footer i {
 }
 
 /*answer box to display correctly entered words*/
-#correct-answer-display-box {
+/*#correct-answer-display-box {
     height: 75px;
-}
+}*/
 
 
