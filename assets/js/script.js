@@ -1,17 +1,38 @@
 function correctCrosswordAcross() {
-    let correctCrossword = [['S','T','A','R'], ['H','O','P','E'], ['H','Y','P','E','R'], ['E','L','S','E'], ['D','E','E','M']];
+    let correctCrossword = [['STAR'], ['HOPE'], ['HYPER'], ['ELSE'], ['DEEM']];
     return correctCrossword;
 }
 
 function correctCrosswordDown() {
-    let correctCrossword = [['S','S','H'], ['T','O','Y','E','D'], ['A','P','P','L','E'], ['R','E','E','S','E'], ['R','E','M']];
+    let correctCrossword = ['SSH', 'TOYED', 'APPLE', 'REESE', 'REM'];
     return correctCrossword;
 }
 
-function compareArrays(array1, array2) {
-    if (array1.toString() === array2.toString()) {
-        return true;
+function compareArraysDown(array1, array2) {
+
+    console.log("compareArraysDown function triggered");
+    let firstWordDownClue = document.getElementById("first-word-down-clue");
+    let correctAnswerBox = document.getElementById('correct-answer-display-box');
+    
+    for (let firstElementIndex = 0; firstElementIndex < array1.length; firstElementIndex++) {
+        
+        if (array1[firstElementIndex] === array2[firstElementIndex]) {
+            console.log("First element index item is: ", array1[firstElementIndex])
+
+            correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
+            
+            
+            /*Add green tick next to the clue for the word indicating correct word entered
+            firstWordDownClue.classList.add("fa-solid");
+            firstWordDownClue.classList.add("fa-check");
+            firstWordDownClue.classList.add("green-tic");*/
+
+
+        }
     }
+
+   
+   
 }
 
 /**compare user entered letters down with correct crossword down words and return red "x" or green check mark and correct/incorrect words */
@@ -40,10 +61,8 @@ function userEnteredWordsDown() {
     
 
     let userEnteredDownWordsArray = [[firstTile, sixthTile, eleventhTile], [secondTile, seventhTile, twelfthTile, seventeenthTile, twentysecondTile], [thirdTile, eightTile, thirteenthTile, eighteenthTile, twentyhirdTile], [fourthTile, ninethTile, fourteenthTile, nineteenthTile, twentyfourth], [fifthteenthTile, twentiethTile, twentyfifth]];
-    console.log("User entered down array word 1 to 3: ", userEnteredDownWordsArray[0], userEnteredDownWordsArray[1], userEnteredDownWordsArray[2])
 
-    let userEnteredDownWordsList = [];
-    
+    let userEnteredDownWordsList = [];    
 
     /*for (let item = 0; item < userEnteredDownWordsArray.length; item++) {
         let word = "";
@@ -59,26 +78,24 @@ function userEnteredWordsDown() {
     for (let item = 0; item < userEnteredDownWordsArray.length; item++) {
         let word = "";
         
-        console.log("Enter outer loop: ");
         for (let letter = 0; letter < userEnteredDownWordsArray[item].length; letter++) {
-            console.log("Enter inner loop");
-            console.log("Letter: ", userEnteredDownWordsArray[item][letter]);
             word += userEnteredDownWordsArray[item][letter].toUpperCase();
         //upperCaseWord = word.toUpperCase();
         }
-        console.log("upperCaseWord triggered");
         userEnteredDownWordsList.push(word);
         console.log("Word: ", word);
         console.log("userEnteredDownWordsList: ", userEnteredDownWordsList);
     
     }
-    
 
+    compareArraysDown(userEnteredDownWordsList, correctCrosswordDown())
+   
+    console.log("User entered down list: ", userEnteredDownWordsList, "\nCorrect crossword down list: ", correctCrosswordDown());
     console.log("User entered word down from unified function: ", userEnteredDownWordsList)
 }
 
 /**function checking letters entered for first vertical word agains correct answer*/
-function checkFirstDown() {
+/*function checkFirstDown() {
     let firstTile = document.getElementById("first-key-input");
     let sixthTile = document.getElementById("sixth-key-input");
     let eleventhTile = document.getElementById("eleventh-key-input");
@@ -94,7 +111,7 @@ function checkFirstDown() {
         
         /*answerbox.innerText = firstDownWord;
         console.log("User entered first down word is correct");
-        console.log("First Down Word: ", firstDownWord)*/
+        console.log("First Down Word: ", firstDownWord)
 
         //Add green tick next to the clue for the word indicating correct word entered
         firstWordDownClue.classList.add("fa-solid");
@@ -130,11 +147,11 @@ function checkFirstDown() {
 
 
     }
-}
+}*/
 
 
 /**function checking letters entered for first vertical word agains correct answer*/
-function checkSecondDown() {
+/*function checkSecondDown() {
     let secondTile = document.getElementById("second-key-input");
     let seventhTile = document.getElementById("seventh-key-input");
     let twelfthTile = document.getElementById("twelfth-key-input");
@@ -152,7 +169,7 @@ function checkSecondDown() {
         
         /*answerbox.innerText = secondDownWord;
         console.log("User entered first down word is correct");
-        console.log("First Down Word: ", secondDownWord)*/
+        console.log("First Down Word: ", secondDownWord)
 
         //Add green check next to the clue for the word indicating correct word entered
         console.log("Adding green class to second word down clue");
@@ -187,10 +204,10 @@ function checkSecondDown() {
         let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
         incorrectAnswerBox.innerHTML += (secondDownWord + "<br>");
     }
-}
+}*/
 
 /**function checking letters entered for first vertical word agains correct answer*/
-function checkThirdDown() {
+/*function checkThirdDown() {
     let thirdTile = document.getElementById("third-key-input");
     let eightTile = document.getElementById("eighth-key-input");
     let thirteenthTile = document.getElementById("thirteenth-key-input");
@@ -206,9 +223,9 @@ function checkThirdDown() {
     if (compareArrays(correctCrosswordDown()[2], thirdDownArray)) {
         console.log("Conditional triggered");
         
-        /*answerbox.innerText = secondDownWord;
-        console.log("User entered first down word is correct");
-        console.log("First Down Word: ", secondDownWord)*/
+        //answerbox.innerText = secondDownWord;
+        //console.log("User entered first down word is correct");
+        //console.log("First Down Word: ", secondDownWord)
 
         //Add green check next to the clue for the word indicating correct word entered
         console.log("Adding green class to second word down clue");
@@ -216,12 +233,12 @@ function checkThirdDown() {
         thirdWordDownClue.classList.add("fa-check");
         thirdWordDownClue.classList.add("green-tic");
 
-        /*Add green border for the tiles holding letters comprising the correct word
+        //Add green border for the tiles holding letters comprising the correct word
         secondTile.classList.add('green-border');
         seventhTile.classList.add('green-border');
         twelfthTile.classList.add('green-border');
         seventeenthTile.classList.add('green-border');
-        twentysecondTile.classList.add('green-border');*/
+        twentysecondTile.classList.add('green-border');
 
         let correctAnswerBox = document.getElementById('correct-answer-display-box');
         correctAnswerBox.innerHTML += thirdDownWord;
@@ -237,13 +254,13 @@ function checkThirdDown() {
         seventhTile.classList.add('red-border');
         twelfthTile.classList.add('red-border');
         seventeenthTile.classList.add('red-border');
-        twentysecondTile.classList.add('red-border');*/
+        twentysecondTile.classList.add('red-border');
 
         //Add incorrectly entered word to be displayed in incorrect answer box
         let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
         incorrectAnswerBox.innerHTML += (thirdDownWord + "<br>");
     }
-}
+}*/
 
 
 function updateResult() {
@@ -252,20 +269,14 @@ function updateResult() {
 
     let firstKeyPressed = document.getElementById("first-key-input").value;
     let divNumber = document.getElementById("first-divsub").textContent;
-    console.log("Div Number:", divNumber);
-    console.log("keyPress", firstKeyPressed);
     //document.getElementById("key-result").innerText = firstKeyPressed;
     letterList.push(firstKeyPressed);
-    console.log("start of project2");
-    console.log(letterList);
-    console.log("letterList logged?")
     letterObject.divNumber = firstKeyPressed;
-    console.log(letterObject);
     
     userEnteredWordsDown()
-    checkFirstDown()
-    checkSecondDown()
-    checkThirdDown()
+    //checkFirstDown()
+    //checkSecondDown()
+    //checkThirdDown()
 }
 
 /**Removes green checks for all correct answers and green tile outlines */
