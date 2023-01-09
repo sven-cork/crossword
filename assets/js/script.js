@@ -20,6 +20,12 @@ function compareArraysDown(array1, array2) {
             console.log("First element index item is: ", array1[firstElementIndex])
 
             correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
+
+            if (firstElementIndex === 0) {
+                firstWordDownClue.classList.add("fa-solid");
+                firstWordDownClue.classList.add("fa-check");
+                firstWordDownClue.classList.add("green-tic");
+            }
             
             
             /*Add green tick next to the clue for the word indicating correct word entered
