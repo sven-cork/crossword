@@ -14,7 +14,7 @@ function compareArrays(array1, array2) {
     }
 }
 
-/**get user entered words across */
+/**compare user entered letters down with correct crossword down words and return red "x" or green check mark and correct/incorrect words */
 function userEnteredWordsDown() {
     let firstTile = document.getElementById("first-key-input").value;
     let secondTile = document.getElementById("second-key-input").value;
