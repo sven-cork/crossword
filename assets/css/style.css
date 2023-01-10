@@ -13,7 +13,7 @@ h1 {
 #background-div {
     height: 350px;
     /*width: 100%;*/
-    background: url('../images/crossword.jpg') no-repeat center center;
+    background: url('../images/crossword2.jpg') no-repeat center center;
 }
 
 #game-name {
@@ -205,4 +205,15 @@ footer i {
     height: 75px;
 }*/
 
-
+/*For small display sizes 6000 pixels and below*/
+@media screen and (max-width: 600px) {
+    .flex-container-clues {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 1200px;
+        margin: auto;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+}
