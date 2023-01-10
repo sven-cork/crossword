@@ -670,7 +670,7 @@ function userEnteredWordsAll() {
     let twentyfifth = document.getElementById("twentyfifth-key-input").value;
     
 
-    let userEnteredWordsArray = [[firstTile, sixthTile, eleventhTile], [secondTile, seventhTile, twelfthTile, seventeenthTile, twentysecondTile], [thirdTile, eightTile, thirteenthTile, eighteenthTile, twentyhirdTile], [fourthTile, ninethTile, fourteenthTile, nineteenthTile, twentyfourth], [fifthteenthTile, twentiethTile, twentyfifth], [firstTile, secondTile, thirdTile, fourthTile], [sixthTile, seventhTile, eightTile, ninethTile], [eleventhTile, twelfthTile, thirteenthTile, fourteenthTile, fifthteenthTile], [seventeenthTile, eighteenthTile, nineteenthTile, nineteenthTile, twentiethTile], [twentysecondTile, twentyhirdTile, twentyfourth, twentyfifth]];
+    let userEnteredWordsArray = [[firstTile, sixthTile, eleventhTile], [secondTile, seventhTile, twelfthTile, seventeenthTile, twentysecondTile], [thirdTile, eightTile, thirteenthTile, eighteenthTile, twentyhirdTile], [fourthTile, ninethTile, fourteenthTile, nineteenthTile, twentyfourth], [fifthteenthTile, twentiethTile, twentyfifth], [firstTile, secondTile, thirdTile, fourthTile], [sixthTile, seventhTile, eightTile, ninethTile], [eleventhTile, twelfthTile, thirteenthTile, fourteenthTile, fifthteenthTile], [seventeenthTile, eighteenthTile, nineteenthTile, twentiethTile], [twentysecondTile, twentyhirdTile, twentyfourth, twentyfifth]];
 
     let userEnteredWordsList = [];    
 
@@ -689,8 +689,8 @@ function userEnteredWordsAll() {
 
     compareArraysAll(userEnteredWordsList, correctCrosswordAll())
    
-    console.log("User entered down list: ", userEnteredDownWordsList, "\nCorrect crossword down list: ", correctCrosswordDown());
-    console.log("User entered word down from unified function: ", userEnteredDownWordsList)
+    console.log("User entered down list: ", userEnteredWordsList, "\nCorrect crossword down list: ", correctCrosswordDown());
+    console.log("User entered word down from unified function: ", userEnteredWordsList)
 }
 
 /*unction userEnteredWordsAcross() {

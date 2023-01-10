@@ -46,14 +46,14 @@ p, p > i {
 #correct-answer-display-box {
     color: darkgreen;
     font-weight: 700;
-    height: 125px;
+    height: 200px;
 }
 
 /*red color applied to correctly answered words displayed*/
 #incorrect-answer-display-box {
     color: darkred;
     font-weight: 700;
-    height: 125px;
+    height: 100px;
 }
 
 .flex-container-crossword {
@@ -95,7 +95,7 @@ p, p > i {
     display: flex;
     flex-direction: row;
     width: 1200px;
-    height: 300px;
+    height: 375px;
     margin: auto;
     justify-content: space-evenly;
     align-items: center;
@@ -242,7 +242,7 @@ footer i {
         display: flex;
         flex-direction: column;
         width: 400px;
-        height: 1000px;
+        height: 800px;
         margin: auto;
         justify-content: space-evenly;
         align-items: baseline;
