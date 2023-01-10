@@ -42,6 +42,12 @@ p, p > i {
     font-size: large;
 }
 
+table {
+    
+    border-spacing: 30px;
+    
+}
+
 /*green color applied to correctly answered words displayed*/
 #correct-answer-display-box {
     color: darkgreen;
@@ -53,7 +59,7 @@ p, p > i {
 #incorrect-answer-display-box {
     color: darkred;
     font-weight: 700;
-    height: 100px;
+    height: 200px;
 }
 
 .flex-container-crossword {
@@ -222,7 +228,7 @@ footer i {
     .flex-container-clues {
         display: flex;
         flex-direction: row;
-        width: 800px;
+        width: 850px;
         height: 300px;
         margin: auto;
         justify-content: space-evenly;
