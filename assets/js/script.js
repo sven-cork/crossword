@@ -25,17 +25,38 @@ function compareArraysDown(array1, array2) {
 
             //checks if correct answered word already exist in correct section
             if (correctAnswerBox.textContent.includes((array1[firstElementIndex]))) {
+                //if red "x" exists in clues section, removes this and adds back green check
+                let firstWordDownClue = document.getElementById("first-word-down-clue");
+                if (firstWordDownClue.classList.contains('red-x')) {
+                    firstWordDownClue.classList.remove("fa-solid");
+                    firstWordDownClue.classList.remove("fa-xmark");
+                    firstWordDownClue.classList.remove("red-x");
+                }
+                              
+                
+                //now adds green check
+                firstWordDownClue.classList.add("fa-solid");
+                firstWordDownClue.classList.add("green-tic");
+                firstWordDownClue.classList.add("fa-check");
                 continue;
+            //adds correct answered word to correct section    
             } else {
                 correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
             }
+ 
             
             //adds green check for correct entered word down to corresponding clue
             if (firstElementIndex === 0) {
                 let firstWordDownClue = document.getElementById("first-word-down-clue");
+                //however checks if red "x" already is displayed and removes this                
+                firstWordDownClue.classList.remove("fa-solid");
+                firstWordDownClue.classList.remove("fa-xmark");
+                firstWordDownClue.classList.remove("red-x");
+                //now adds green check
                 firstWordDownClue.classList.add("fa-solid");
-                firstWordDownClue.classList.add("fa-check");
                 firstWordDownClue.classList.add("green-tic");
+                firstWordDownClue.classList.add("fa-check");
+                
             } else if (firstElementIndex === 1) {
                 let secondWordDownClue = document.getElementById("second-word-down-clue");
                 secondWordDownClue.classList.add("fa-solid");
@@ -67,11 +88,11 @@ function compareArraysDown(array1, array2) {
           //answered word is not correct
         } else if (array1[firstElementIndex] != "") {
             
-            //checks if correct answered word already exist in correct section
+            //checks if incorrect answered word already exist in incorrect section
             if (incorrectAnswerBox.textContent.includes((array1[firstElementIndex]))) {
                 continue;  
             } else {
-                //adds incorrect answered word to 
+                //adds incorrect answered word to incorrect answers section
                 incorrectAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
             }
             
@@ -79,6 +100,10 @@ function compareArraysDown(array1, array2) {
             //adds red "x" for incorrect entered down word to corresponding clue
             if (firstElementIndex === 0) {
                 let firstWordDownClue = document.getElementById("first-word-down-clue");
+                //however checks if green check exists and removes this
+                firstWordDownClue.classList.remove("green-tic");
+                firstWordDownClue.classList.remove("fa-check");
+                //now adds red check
                 firstWordDownClue.classList.add("fa-solid");
                 firstWordDownClue.classList.add("fa-xmark");
                 firstWordDownClue.classList.add("red-x");
@@ -338,7 +363,7 @@ function userEnteredWordsDown() {
 }*/
 
 
-function updateResult() {
+/*function updateResult() {
     let letterList = [];
     let letterObject = {First:"something"}
 
@@ -352,7 +377,7 @@ function updateResult() {
     //checkFirstDown()
     //checkSecondDown()
     //checkThirdDown()
-}
+}*/
 
 /**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
@@ -385,7 +410,7 @@ function resetAll() {
 }   
 
 
-document.getElementById("submit-button").addEventListener("click", updateResult);
+document.getElementById("submit-button").addEventListener("click", userEnteredWordsDown);
 document.getElementById("reset-button").addEventListener("click", resetAll);
 
 
