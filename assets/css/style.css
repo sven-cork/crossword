@@ -46,7 +46,7 @@ p, p > i {
 #correct-answer-display-box {
     color: darkgreen;
     font-weight: 700;
-    height: 75px;
+    height: 125px;
 }
 
 /*red color applied to correctly answered words displayed*/
@@ -62,6 +62,7 @@ p, p > i {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: auto;
+    align-items: center;
 }
 
 /*button container*/
@@ -197,7 +198,7 @@ footer i {
 /*container holding incorrect/correct answers boxes*/
 #correct-incorrect-answers-container {
     /*margin-left: 50px;*/
-    height: 250px;
+    height: 300px;
 }
 
 /*answer box to display correctly entered words*/
@@ -205,15 +206,79 @@ footer i {
     height: 75px;
 }*/
 
-/*For small display sizes 6000 pixels and below*/
+/*For medium display sizes 850 pixels and below*/
+@media screen and (max-width: 850px) {
+
+    #crossword-container {
+        width: 250px;
+        height: 295px;
+        background: black;
+        border: solid;
+        margin: auto;
+        margin-top: 150px;
+        
+    }
+
+
+    .flex-container-clues {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        height: 300px;
+        margin: auto;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #background-div {
+        height: 500px;
+        /*width: 100%;*/
+        background: url('../images/crossword2.jpg') no-repeat center center;
+    }
+}
+
+/*For small display sizes 600 pixels and below*/
 @media screen and (max-width: 600px) {
     .flex-container-clues {
         display: flex;
         flex-direction: column;
         width: 400px;
-        height: 1200px;
+        height: 1000px;
         margin: auto;
         justify-content: space-evenly;
         align-items: baseline;
     }
+
+    footer {
+        height: 75px;
+        margin-top: 5%;
+    }
+    
+    footer ul {
+        text-align: center;
+        height: inherit;
+        margin-left: auto;
+    }
+    
+    footer li {
+        display: inline;
+    }
+    
+    footer i {
+        color: rgb(96, 38, 13);
+        font-size: 150%;
+        margin: 1%;
+        padding: 5%;
+    }
+
+    #across-clues {
+        width: 300px;
+        height: 250px;
+    }
+    
+    #vertical-clues {
+        width: 400px;
+        height: 250px;
+    }
+
 }
