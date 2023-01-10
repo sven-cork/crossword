@@ -62,7 +62,6 @@ p, p > i {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: auto;
-    align-items: center;
 }
 
 /*button container*/
