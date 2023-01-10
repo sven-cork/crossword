@@ -44,7 +44,7 @@ p, p > i {
 
 table {
     
-    border-spacing: 30px;
+    border-spacing: 10px;
     
 }
 
@@ -145,7 +145,7 @@ table {
 
 .clues-paragraph {
     height: 20px;
-    width: 500px;
+    width: 250px;
 }
 
 /*permanent black crossword tiles*/
@@ -203,7 +203,8 @@ footer i {
 /*container holding incorrect/correct answers boxes*/
 #correct-incorrect-answers-container {
     /*margin-left: 50px;*/
-    height: 300px;
+    height: 250px;
+    width: 150px;
 }
 
 /*answer box to display correctly entered words*/
@@ -224,7 +225,6 @@ footer i {
         
     }
 
-
     .flex-container-clues {
         display: flex;
         flex-direction: row;
@@ -239,6 +239,22 @@ footer i {
         height: 500px;
         /*width: 100%;*/
         background: url('../images/crossword2.jpg') no-repeat center center;
+    }
+
+    #across-clues {
+        width: 150px;
+        height: 250px;
+    }
+    
+    #vertical-clues {
+        width: 150px;
+        height: 250px;
+    }
+
+    /*container holding incorrect/correct answers boxes*/
+    #correct-incorrect-answers-container {
+        width: 150px;
+        height: 250px;
     }
 }
 
