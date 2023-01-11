@@ -218,8 +218,6 @@ function compareArraysAll(array1, array2) {
                 fifthWordAcrossClue.classList.add("fa-solid", "fa-xmark", "red-x");
             }
         }
-            incorrecAnswerBoxContent = incorrectAnswerBox.textContent;
-            console.log("Content of correctAnswerBoxContent: ", incorrecAnswerBoxContent);
     }  
 }
 }
@@ -248,7 +246,6 @@ function userEnteredWordsAll() {
     let twentyfourth = document.getElementById("twentyfourth-key-input").value;
     let twentyfifth = document.getElementById("twentyfifth-key-input").value;
     
-
     let userEnteredWordsArray = [[firstTile, sixthTile, eleventhTile], [secondTile, seventhTile, twelfthTile, seventeenthTile, twentysecondTile], [thirdTile, eightTile, thirteenthTile, eighteenthTile, twentyhirdTile], [fourthTile, ninethTile, fourteenthTile, nineteenthTile, twentyfourth], [fifthteenthTile, twentiethTile, twentyfifth], [firstTile, secondTile, thirdTile, fourthTile], [sixthTile, seventhTile, eightTile, ninethTile], [eleventhTile, twelfthTile, thirteenthTile, fourteenthTile, fifthteenthTile], [seventeenthTile, eighteenthTile, nineteenthTile, twentiethTile], [twentysecondTile, twentyhirdTile, twentyfourth, twentyfifth]];
 
     let userEnteredWordsList = [];    
@@ -263,13 +260,9 @@ function userEnteredWordsAll() {
         userEnteredWordsList.push(word);
         console.log("Word: ", word);
         console.log("userEnteredDownWordsList: ", userEnteredWordsList);
-    
     }
 
-    compareArraysAll(userEnteredWordsList, correctCrosswordAll())
-   
-    console.log("User entered down list: ", userEnteredWordsList, "\nCorrect crossword down list: ", correctCrosswordDown());
-    console.log("User entered word down from unified function: ", userEnteredWordsList)
+    compareArraysAll(userEnteredWordsList, correctCrosswordAll());
 }
 
 /**Removes green checks for all correct answers and green tile outlines */
@@ -285,13 +278,10 @@ function resetAll() {
     element.classList.remove('green-border', 'red-border', 'fa-solid', 'fa-check', 'green-tic', 'fa-xmark', 'red-x');
     });
     
-    
     /*remove user entered letters from crossword tiles*/    
     let userEnteredLetters = document.querySelectorAll('input');
 
-    userEnteredLetters.forEach((element) => {
-    element.value = "";
-    });
+    userEnteredLetters.forEach((element) => {element.value = "";});
     
     /*remove correct and incorrect words displayed entered by user*/
     let correctDisplayedAnswers = document.getElementById('correct-answer-display-box');
@@ -299,7 +289,6 @@ function resetAll() {
 
     let incorrectDisplayedAnswers = document.getElementById('incorrect-answer-display-box');
     incorrectDisplayedAnswers.innerText = "";
-
 }   
 
 document.getElementById("submit-button").addEventListener("click", userEnteredWordsAll);

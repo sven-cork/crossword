@@ -81,8 +81,7 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
 
 ## Testing
 
-- The enrollment form works validating successfully with Code Institue formdump.
-- The site has been tested to work with the following web browsers: Safari, Chrome and Firefox
+- The website has been tested to work with the following web browsers: Safari, Chrome and Firefox
 - Love Art website displays as intended for all screen sizes when tested with Google Chrome dev tools pre-configured device formats. When the browser window is adjusted manually from maximum to smallest width, all elements display as intended.
 - Manual testing of the site was successful on the following devices: iPhone 12, iPad Air (3rd generation), iPad Air 2 and iMac 27".
 
@@ -112,39 +111,27 @@ Further tests were carried out using Chrome dev tools (toggle device tool bar) f
 ## Validation
 
 ### HTML Validation
-- [W3 HTML Checker](https://validator.w3.org/nu/#textarea) was used repeatedly throughout the build of Love Art website to test all markup.
+- [W3 HTML Checker](https://validator.w3.org/nu/#textarea) was used to test HTML validation. The website passed as per below screenshot.
 
 <details>
-<summary>Home</summary>
 
-![W3 HTML Checker result for Home](/assets/images/home-html-checker.jpg)
+<summary>Le Crossword</summary>
 
-</details>
-
-<details>
-<summary>Artwork</summary>
-
-![W3 HTML Checker result for Artwork](/assets/images/artwork-html-checker.jpg)
-
-</details>
-
-<details>
-<summary>Enrollment</summary>
-
-![W3 HTML Checker result for Enrollment](/assets/images/enrollment-html-checker.jpg)
+![W3 HTML Checker result for index.html](/assets/images/html_check.png)
 
 </details>
 
 ### CSS Validation
 
-- [W3 CSS Checker](https://jigsaw.w3.org/css-validator/) was used repeatedly throughout the build of Love Art website to test all CSS.
+- [W3 CSS Checker](https://jigsaw.w3.org/css-validator/) was used to test CSS validation. The website passed as per below screenshot.
 
 </details>
 
 <details>
+
 <summary>CSS Checker for style.css</summary>
 
-![W3 CSS Checker result for style.css](/assets/images/css-checker.jpg)
+![W3 CSS Checker result for style.css](/assets/images/css_validation.png)
 
 </details>
 
