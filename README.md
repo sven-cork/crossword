@@ -1,19 +1,19 @@
 # Crossword
 
 
-Crossword is a basic crossword game with 10 words to figure out based on five vertical and five horizontal clues.
-When the correct word is entered a green check appears next to the corresponding clue.
+Le Crossword is a basic crossword game written in JavaScript allowing players to take up the challenge of guessing the correct word corresponding to 10 clues. Le Crossword lets the player check the correct and incorrect answers indicated by green and red coloured marks. When submitting the correct or incorrect words will also be listed in red or green color. 
+
+Le Crossword demonstrates a basic game concept however might provide inspiration for developers who wish to develop a more advanced crossword with JavaScript.
 
 ![Love Art displayed in Am I Responsive Website (https://ui.dev/amiresponsive?url=https://sven-cork.github.io/love-art)](/assets/images/responsive-website3.jpg)
 
 ## Table of contents
 
 - [Features](#features)
-  - [Navigation](#navigation)
+  - [Heading](#heading)
+  - [Crossword Area](#crossword-area)
   - [Footer](#footer)
-  - [Home Page](#home-page)
-  - [Artwork](#artwork)
-  - [Enrollment](#enrollment)
+
 - [Technologies Utilised](#technologies-utilised)
 - [Testing](#testing)
 - [Validation](#validation)
@@ -27,15 +27,14 @@ When the correct word is entered a green check appears next to the corresponding
 
 ## Features
 
-- ### Navigation 
-  - The community logo "LOVE ART" is displayed in the top left corner of navigation.  
-  - The navigation bar is displayed on all pages.
-  - Links to all pages are located on left hand side for screen width above 1050px. For smaller screen sizes links drop below the Love Art logo.
-  - Page links underline when selected to guide the user with navigation.
+- ### Heading
+  - Le Crosswords heading featured at the top of the page in a Courier New font style evoking a feeling of old newspaper. 
 
-      
-  ![Screenshot of Love Art navigation bar](/assets/images/navigation.jpg)
-      
+  ![Screenshot of Le Crossword heading](/assets/images/crossword_heading.png) 
+
+- ### Crossword Area
+
+  ![Screenshot of Crossword Area](/assets/images/crossword_area.png) 
 
 - ### Footer
   - The footer contains social media links for Facebook, Twitter and Instagram.
@@ -62,21 +61,6 @@ When the correct word is entered a green check appears next to the corresponding
 
   ![Screenshot of Home page feedback section](/assets/images/feedback.jpg)
 
-
-- ### Artwork
-  - The Artwork page contains a gallery of art pieces created by Love Art community members.
-
-  ![Screenshot of Artwork gallery](/assets/images/gallery.jpg)
-
-- ### Enrollment
-  - The Enrollment page features a form with fields for visitors to enter email address, first and last name.
-
-  ![Screenshot of Enrollment form](/assets/images/enrollment-form.jpg)
-
-  - From a drop menu the visitor can choose the event to enroll.
-  - Three maps are provided displaying the location for each activity including meetup date and times.
-
-  ![Screenshot of Enrollment map location](/assets/images/map-location.jpg)
 
 ## Technologies Utilised
 
