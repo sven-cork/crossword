@@ -215,16 +215,15 @@ Hero image aquired from [Pexels](#pexels.com):
  - crossword2.jpg (original name: pexels-brett-jordan-5908695.jpg) - by Brett Jordan
 
 
+### Code
+- JavaScript code for arrow function locating items by class borrowed from the website listed below. This code snippet added functionality to the reset button by locating all elements with a green check or red "X" mark in order for them to be removed:
+https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/
+- Code snippet from line 749 to 753 in scripts.js.
+
+
 ### Other
 
 Icons for social media links are from [Fontawesome](https://fontawesome.com/).
 
-Design style for hero-image with cover text mathing to the dominant tone and background color was influenced from Code Institute Love Running project.
-
 Inspiration for the crossword format and clues (original clue text changed for this project) was borrowed from James Scalise [YouTube channel:](https://www.youtube.com/watch?v=_KunjDXYYYg&ab_channel=JamesScalise).
 
-JavaScript code for arrow function locating items by class borrowed from the website listed below. This code snippet added functionality to the reset button by locating all elements with a green check or red "X" mark in order for them to be removed:
-https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/
-
-Code snippet from line 749 to 753 in scripts.js.
-      
