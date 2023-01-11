@@ -5,12 +5,13 @@ Le Crossword is a basic crossword game written in JavaScript allowing players to
 
 Le Crossword demonstrates a basic game concept however might provide inspiration for developers who wish to develop a more advanced crossword with JavaScript.
 
-![Le Crossword displayed in Am I Responsive Website (https://ui.dev/amiresponsive?url=https://sven-cork.github.io/love-art)](/assets/images/responsive-website3.jpg)
+![Le Crossword displayed in Am I Responsive Website (https://ui.dev/amiresponsive?url=https://sven-cork.github.io/crossword/)](/assets/images/am_I_responsive.png)
 
 ## Table of contents
 
 - [Features](#features)
   - [Heading](#heading)
+  - [Crossword Area](#crossword-area)
   - [Crossword Area](#crossword-area)
   - [Footer](#footer)
 
@@ -33,6 +34,11 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
   ![Screenshot of Le Crossword heading](/assets/images/crossword_heading.png) 
 
 - ### Crossword Area
+  - This section allows the user to enter letters in the tiles to solve word clues horizontal and vertical.
+  - Comprising 25 tiles of which 21 can receive keyboard input for the user guessed letter.
+  - The submit button will allow the user to view words guessed correct or incorrect displayed in the section below crossword area.
+  - Using the reset button the user can reset the crossword back to empty tiles and remove all correct or incorrect words and color marks.
+
 
   ![Screenshot of Crossword Area](/assets/images/crossword_area.png) 
 
