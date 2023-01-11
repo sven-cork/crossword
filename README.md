@@ -138,56 +138,27 @@ Further tests were carried out using Chrome dev tools (toggle device tool bar) f
 ## Performance/Accessibility 
 
 Google Chrome Developer Tools Lighthouse feature was used to test Performance and Accessibility. 
-For the desktop version of Lighthouse a score over 90% were achieved for all pages and test categories. 
-For the mobile version of Lighthouse all pages apart from Enrollment received a score above 90%. The Enrollment page received an inital score in the 70% range. Lighthouse Opportunity section recommended optimising the size for image 'enrollment.jpeg' (700Kb). Using TinyPNG service 'enrollment.jpeg' was compressed to 400Kb and subsequent re-run of Lighthouse Mobile test achieved 82% performance score.
+For both desktop and mobile versions of Lighthouse a score over 90% were achieved for all metrics. 
 
-One concern was for the readability of the text located on the Home page on the left hand side in the middle section advertising Drawing Walks. The background is not uniformly dark. However adding dropshadow to the text resolved this concern.
 
 ### Lighthouse Desktop version test outcome
 
 <details>
-<summary>Home</summary>
+<summary>Desktop Performance</summary>
 
-![Chrome Dev Tools Lighthouse output](/assets/images/home-lighthouse.jpg)
-
-</details>
-
-<details>
-<summary>Artwork</summary>
-
-![Chrome Dev Tools Lighthouse output](/assets/images/artwork-lighthouse.jpg)
-
-</details>
-
-<details>
-<summary>Enrollment</summary>
-
-![Chrome Dev Tools Lighthouse output](/assets/images/enrollment-lighthouse.jpg)
+![Chrome Dev Tools Lighthouse output](/assets/images/desktop_performance.png)
 
 </details>
 
 ### Lighthouse Mobile version test outcome
 
 <details>
-<summary>Home</summary>
+<summary>Mobile Performance</summary>
 
-![Chrome Dev Tools Lighthouse output](/assets/images/home-lighthouse-mobile.jpg)
-
-</details>
-
-<details>
-<summary>Artwork</summary>
-
-![Chrome Dev Tools Lighthouse output](/assets/images/artwork-lighthouse-mobile.jpg)
+![Chrome Dev Tools Lighthouse output](/assets/images/mobile_performance.png)
 
 </details>
 
-<details>
-<summary>Enrollment</summary>
-
-![Chrome Dev Tools Lighthouse output](/assets/images/enrollment-lighthouse-mobile.jpg)
-
-</details>
 
 ## Deployment
 
