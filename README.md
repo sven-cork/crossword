@@ -15,6 +15,7 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
   - [Clues Area](#clues-area)
   - [Corrected Words Area](#clues-area)
   - [Footer](#footer)
+  - [Future Ideas](#future-ideas)
 
 - [Design](#design)
 - [Technologies Utilised](#technologies-utilised)
@@ -61,6 +62,10 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
   - The links are stylised icons from Font Awesome.
   
   ![Screenshot of Footer Area](/assets/images/footer.png)
+
+- ### Future Ideas
+  - The option of playing a few different crosswords, perhaps toggling between easy, medium and hard.
+  - Best of scoreboard offering user to enter name at start of game.
         
 ## Design
   - Courier New was chosen for header font style as this I believe evokes a sense of classic old newspapper.

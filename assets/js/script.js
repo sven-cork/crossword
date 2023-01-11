@@ -3,16 +3,6 @@ function correctCrosswordAll() {
     return correctCrossword;
 }
 
-/*function correctCrosswordAcross() {
-    let correctCrossword = ['STAR', 'HOPE', 'HYPER', 'ELSE', 'DEEM'];
-    return correctCrossword;
-}
-
-function correctCrosswordDown() {
-    let correctCrossword = ['SHH', 'TOYED', 'APPLE', 'REESE', 'REM'];
-    return correctCrossword;
-}*/
-
 /**compare user entered words down against correct crossword*/
 function compareArraysAll(array1, array2) {
 
@@ -36,7 +26,6 @@ function compareArraysAll(array1, array2) {
                 correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
             }
  
-            
             //adds green check for correct entered word down to corresponding clue
             if (firstElementIndex === 0) {
                 let firstWordDownClue = document.getElementById("first-word-down-clue");
@@ -54,21 +43,16 @@ function compareArraysAll(array1, array2) {
                 //however checks if red "x" already is displayed and removes this 
                 if (secondWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     secondWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 secondWordDownClue.classList.add("fa-solid", "fa-check", "green-tic"); 
                 
-                /*secondWordDownClue.classList.add("fa-solid");
-                secondWordDownClue.classList.add("fa-check");
-                secondWordDownClue.classList.add("green-tic");*/
             } else if (firstElementIndex === 2) {
                 let thirdWordDownClue = document.getElementById("third-word-down-clue");
                 if (thirdWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     thirdWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+            
                 }               
                 //now adds green check
                 thirdWordDownClue.classList.add("fa-solid", "fa-check", "green-tic"); 
@@ -77,8 +61,7 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (fourthWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     fourthWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 fourthWordDownClue.classList.add("fa-solid", "fa-check", "green-tic");
@@ -87,8 +70,7 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (fifthWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     fifthWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 fifthWordDownClue.classList.add("fa-solid", "fa-check", "green-tic");
@@ -97,8 +79,7 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (firstWordAcrossClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     firstWordAcrossClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 firstWordAcrossClue.classList.add("fa-solid", "fa-check", "green-tic");
@@ -107,8 +88,7 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (secondWordAcrossClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     secondWordAcrossClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 secondWordAcrossClue.classList.add("fa-solid", "fa-check", "green-tic");
@@ -117,8 +97,7 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (thirdWordAcrossClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     thirdWordAcrossClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 thirdWordAcrossClue.classList.add("fa-solid", "fa-check", "green-tic");
@@ -127,8 +106,7 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (fourthWordAcrossClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     fourthWordAcrossClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 fourthWordAcrossClue.classList.add("fa-solid", "fa-check", "green-tic");
@@ -137,45 +115,23 @@ function compareArraysAll(array1, array2) {
                 //if red "x" exists in clues section, removes this and adds back green check
                 if (fifthWordAcrossClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
                     fifthWordAcrossClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }               
                 //now adds green check
                 fifthWordAcrossClue.classList.add("fa-solid", "fa-check", "green-tic");
             }
-            
-            
-            /*Add green tick next to the clue for the word indicating correct word entered
-            firstWordDownClue.classList.add("fa-solid");
-            firstWordDownClue.classList.add("fa-check");
-            firstWordDownClue.classList.add("green-tic");*/
 
           //answered word is not correct
         } else if (array1[firstElementIndex] != "") {
 
-            
-
             //checks if correct answered word already exist in correct section
             if (incorrectAnswerBox.textContent.includes((array1[firstElementIndex]))) {
-                //if red "x" exists in clues section, removes this and adds back green check
-                /*let firstWordDownClue = document.getElementById("first-word-down-clue");
-                //however checks if red "x" already is displayed and removes this                
-                firstWordDownClue.classList.remove("fa-solid");
-                firstWordDownClue.classList.remove("fa-xmark");
-                firstWordDownClue.classList.remove("red-x");
-                //now adds green check
-                firstWordDownClue.classList.add("fa-solid");
-                firstWordDownClue.classList.add("green-tic");
-                firstWordDownClue.classList.add("fa-check");*/
                 continue;
 
-                
             } else {
                 //adds incorrect answered word to incorrect answers section
                 incorrectAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
             
-            
-
             //adds red "x" for incorrect entered down word to corresponding clue
             if (firstElementIndex === 0) {
                 let firstWordDownClue = document.getElementById("first-word-down-clue");
@@ -211,8 +167,7 @@ function compareArraysAll(array1, array2) {
                 //however checks if green check exists and removes this
                 if (fifthWordDownClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
                     fifthWordDownClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }
                 //adds red "x" mark to incorrect guessed clue
                 fifthWordDownClue.classList.add("fa-solid", "fa-xmark", "red-x");
@@ -221,8 +176,7 @@ function compareArraysAll(array1, array2) {
                 //however checks if green check exists and removes this
                 if (firstWordAcrossClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
                     firstWordAcrossClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }
                 //adds red "x" mark to incorrect guessed clue
                 firstWordAcrossClue.classList.add("fa-solid", "fa-xmark", "red-x");
@@ -231,8 +185,7 @@ function compareArraysAll(array1, array2) {
                 //however checks if green check exists and removes this
                 if (secondWordAcrossClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
                     secondWordAcrossClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }
                 //adds red "x" mark to incorrect guessed clue
                 secondWordAcrossClue.classList.add("fa-solid", "fa-xmark", "red-x");
@@ -241,8 +194,7 @@ function compareArraysAll(array1, array2) {
                 //however checks if green check exists and removes this
                 if (thirdWordAcrossClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
                     thirdWordAcrossClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }
                 //adds red "x" mark to incorrect guessed clue
                 thirdWordAcrossClue.classList.add("fa-solid", "fa-xmark", "red-x");
@@ -251,8 +203,7 @@ function compareArraysAll(array1, array2) {
                 //however checks if green check exists and removes this
                 if (fourthWordAcrossClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
                     fourthWordAcrossClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }
                 //adds red "x" mark to incorrect guessed clue
                 fourthWordAcrossClue.classList.add("fa-solid", "fa-xmark", "red-x");
@@ -261,8 +212,7 @@ function compareArraysAll(array1, array2) {
                 //however checks if green check exists and removes this
                 if (fifthWordAcrossClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
                     fifthWordAcrossClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");*/
+                    
                 }
                 //adds red "x" mark to incorrect guessed clue
                 fifthWordAcrossClue.classList.add("fa-solid", "fa-xmark", "red-x");
@@ -273,377 +223,6 @@ function compareArraysAll(array1, array2) {
     }  
 }
 }
-
-/**compare user entered words down against correct crossword words down */
-/*function compareArraysDown(array1, array2) {
-
-    console.log("compareArraysDown function triggered");
-    
-    
-    for (let firstElementIndex = 0; firstElementIndex < array1.length; firstElementIndex++) {
-
-        let correctAnswerBox = document.getElementById('correct-answer-display-box');
-        let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
-
-        //checks if user entered word down based on index corresponds to correct crossword down by same index
-        if (array1[firstElementIndex] === array2[firstElementIndex]) {
-            console.log("First element index item is: ", array1[firstElementIndex])
-
-            //checks if correct answered word already exist in correct section
-            if (correctAnswerBox.textContent.includes((array1[firstElementIndex]))) {
-                continue;
-            //adds correct answered word to correct section    
-            } else {
-                correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
-            }
- 
-            
-            //adds green check for correct entered word down to corresponding clue
-            //if (firstElementIndex === 0) {
-                //let firstWordDownClue = document.getElementById("first-word-down-clue");
-                //however checks if red "x" already is displayed and removes this 
-                //if (firstWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                    //firstWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    //*firstWordDownClue.classList.remove("fa-xmark");
-                    //firstWordDownClue.classList.remove("red-x");
-                }               
-                //now adds green check
-                //firstWordDownClue.classList.add("fa-solid", "fa-check", "green-tic");               
-                
-            } else if (firstElementIndex === 1) {
-                let secondWordDownClue = document.getElementById("second-word-down-clue");
-                //however checks if red "x" already is displayed and removes this 
-                if (secondWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                    secondWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");
-                }               
-                //now adds green check
-                secondWordDownClue.classList.add("fa-solid", "fa-check", "green-tic"); 
-                
-                /*secondWordDownClue.classList.add("fa-solid");
-                secondWordDownClue.classList.add("fa-check");
-                secondWordDownClue.classList.add("green-tic");
-            } else if (firstElementIndex === 2) {
-                let thirdWordDownClue = document.getElementById("third-word-down-clue");
-                if (thirdWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                    thirdWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");
-                }               
-                //now adds green check
-                thirdWordDownClue.classList.add("fa-solid", "fa-check", "green-tic"); 
-            } else if (firstElementIndex === 3) {
-                let fourthWordDownClue = document.getElementById("fourth-word-down-clue");
-                //if red "x" exists in clues section, removes this and adds back green check
-                if (fourthWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                    fourthWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");
-                }               
-                //now adds green check
-                fourthWordDownClue.classList.add("fa-solid", "fa-check", "green-tic");
-            } else if (firstElementIndex === 4) {
-                let fifthWordDownClue = document.getElementById("fifth-word-down-clue");
-                //if red "x" exists in clues section, removes this and adds back green check
-                if (fifthWordDownClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                    fifthWordDownClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");
-                }               
-                //now adds green check
-                fifthWordDownClue.classList.add("fa-solid", "fa-check", "green-tic");
-            }
-            
-            
-            /*Add green tick next to the clue for the word indicating correct word entered
-            firstWordDownClue.classList.add("fa-solid");
-            firstWordDownClue.classList.add("fa-check");
-            firstWordDownClue.classList.add("green-tic");
-
-          //answered word is not correct
-        } else if (array1[firstElementIndex] != "") {
-
-            
-
-            //checks if correct answered word already exist in correct section
-            if (incorrectAnswerBox.textContent.includes((array1[firstElementIndex]))) {
-                //if red "x" exists in clues section, removes this and adds back green check
-                /*let firstWordDownClue = document.getElementById("first-word-down-clue");
-                //however checks if red "x" already is displayed and removes this                
-                firstWordDownClue.classList.remove("fa-solid");
-                firstWordDownClue.classList.remove("fa-xmark");
-                firstWordDownClue.classList.remove("red-x");
-                //now adds green check
-                firstWordDownClue.classList.add("fa-solid");
-                firstWordDownClue.classList.add("green-tic");
-                firstWordDownClue.classList.add("fa-check");
-                continue;
-
-                
-            } else {
-                //adds incorrect answered word to incorrect answers section
-                incorrectAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
-            
-            
-
-            //adds red "x" for incorrect entered down word to corresponding clue
-            if (firstElementIndex === 0) {
-                let firstWordDownClue = document.getElementById("first-word-down-clue");
-                //however checks if green check exists and removes this
-                if (firstWordDownClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                    firstWordDownClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                }
-                //adds red "x" mark to incorrect guessed clue
-                firstWordDownClue.classList.add("fa-solid", "fa-xmark", "red-x");
-            } else if (firstElementIndex === 1) {
-                let secondWordDownClue = document.getElementById("second-word-down-clue");
-                if (secondWordDownClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                    secondWordDownClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                }
-                //Now adds red "x" mark to incorrect guessed clue
-                secondWordDownClue.classList.add("fa-solid", "fa-xmark", "red-x");
-            } else if (firstElementIndex === 2) {
-                let thirdWordDownClue = document.getElementById("third-word-down-clue");
-                if (thirdWordDownClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                    thirdWordDownClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                }
-                //adds red "x" mark to incorrect guessed clue
-                thirdWordDownClue.classList.add("fa-solid", "fa-xmark", "red-x");
-            } else if (firstElementIndex === 3) {
-                let fourthWordDownClue = document.getElementById("fourth-word-down-clue");
-                if (fourthWordDownClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                    fourthWordDownClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                }
-                //adds red "x" mark to incorrect guessed clue
-                fourthWordDownClue.classList.add("fa-solid", "fa-xmark", "red-x");
-            } else if (firstElementIndex === 4) {
-                let fifthWordDownClue = document.getElementById("fifth-word-down-clue");
-                //however checks if green check exists and removes this
-                if (fifthWordDownClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                    fifthWordDownClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    /*firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");
-                }
-                //adds red "x" mark to incorrect guessed clue
-                fifthWordDownClue.classList.add("fa-solid", "fa-xmark", "red-x");
-            }
-        }
-            incorrecAnswerBoxContent = incorrectAnswerBox.textContent;
-            console.log("Content of correctAnswerBoxContent: ", incorrecAnswerBoxContent);
-    }  
-}
-}
-*/
-/*function compareArraysAcross(array1, array2) {       
-        
-        for (let firstElementIndex = 0; firstElementIndex < array1.length; firstElementIndex++) {
-    
-            let correctAnswerBox = document.getElementById('correct-answer-display-box');
-            let incorrectAnswerBox = document.getElementById('incorrect-answer-display-box');
-    
-            //checks if user entered word down based on index corresponds to correct crossword down by same index
-            if (array1[firstElementIndex] === array2[firstElementIndex]) {
-                console.log("First element index item is: ", array1[firstElementIndex])
-    
-                //checks if correct answered word already exist in correct section
-                if (correctAnswerBox.textContent.includes((array1[firstElementIndex]))) {
-                    console.log("Word exist in correct section");
-                    continue;
-
-                //adds correct answered word to correct section    
-                } else {
-                    correctAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
-                    console.log("Word did not exist in correct section");
-                }
-     
-                
-                //adds green check for correct entered word down to corresponding clue
-                if (firstElementIndex === 0) {
-                    let firstWordAccrosClue = document.getElementById("first-word-accros-clue");
-                    //however checks if red "x" already is displayed and removes this 
-                    if (firstWordAccrosClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                        firstWordAccrosClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                        /*firstWordDownClue.classList.remove("fa-xmark");
-                        firstWordDownClue.classList.remove("red-x");
-                    }               
-                    //now adds green check
-                    firstWordAccrosClue.classList.add("fa-solid", "fa-check", "green-tic");  
-                    console.log("Green tic triggered");             
-                    
-                } else if (firstElementIndex === 1) {
-                    let secondWordAccrosClue = document.getElementById("second-word-accros-clue");
-                    //however checks if red "x" already is displayed and removes this 
-                    if (secondWordAccrosClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                        secondWordAccrosClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                        /*firstWordDownClue.classList.remove("fa-xmark");
-                        firstWordDownClue.classList.remove("red-x");
-                    }               
-                    //now adds green check
-                    secondWordAccrosClue.classList.add("fa-solid", "fa-check", "green-tic"); 
-                    
-                    /*secondWordDownClue.classList.add("fa-solid");
-                    secondWordDownClue.classList.add("fa-check");
-                    secondWordDownClue.classList.add("green-tic");
-                } else if (firstElementIndex === 2) {
-                    let thirdWordAccrosClue = document.getElementById("third-word-accros-clue");
-                    if (thirdWordAccrosClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                        thirdWordAccrosClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                        /*firstWordDownClue.classList.remove("fa-xmark");
-                        firstWordDownClue.classList.remove("red-x");
-                    }               
-                    //now adds green check
-                    thirdWordAccrosClue.classList.add("fa-solid", "fa-check", "green-tic"); 
-                } else if (firstElementIndex === 3) {
-                    let fourthWordAccrosClue = document.getElementById("fourth-word-accros-clue");
-                    //if red "x" exists in clues section, removes this and adds back green check
-                    if (fourthWordAccrosClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                        fourthWordAccrosClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                        /*firstWordDownClue.classList.remove("fa-xmark");
-                        firstWordDownClue.classList.remove("red-x");
-                    }               
-                    //now adds green check
-                    fourthWordAccrosClue.classList.add("fa-solid", "fa-check", "green-tic");
-                } else if (firstElementIndex === 4) {
-                    let fifthWordAccrosClue = document.getElementById("fifth-word-accros-clue");
-                    //if red "x" exists in clues section, removes this and adds back green check
-                    if (fifthWordAccrosClue.classList.contains("fa-solid", "fa-xmark", "red-x")) {
-                        fifthWordAccrosClue.classList.remove("fa-solid", "fa-xmark", "red-x");
-                        /*firstWordDownClue.classList.remove("fa-xmark");
-                        firstWordDownClue.classList.remove("red-x");
-                    }               
-                    //now adds green check
-                    fifthWordAccrosClue.classList.add("fa-solid", "fa-check", "green-tic");
-                }
-                
-                
-                /*Add green tick next to the clue for the word indicating correct word entered
-                firstWordDownClue.classList.add("fa-solid");
-                firstWordDownClue.classList.add("fa-check");
-                firstWordDownClue.classList.add("green-tic");
-    
-              //answered word is not correct
-            } else if (array1[firstElementIndex] != "") {
-    
-                
-    
-                //checks if correct answered word already exist in correct section
-                if (incorrectAnswerBox.textContent.includes((array1[firstElementIndex]))) {
-                    //if red "x" exists in clues section, removes this and adds back green check
-                    /*let firstWordDownClue = document.getElementById("first-word-down-clue");
-                    //however checks if red "x" already is displayed and removes this                
-                    firstWordDownClue.classList.remove("fa-solid");
-                    firstWordDownClue.classList.remove("fa-xmark");
-                    firstWordDownClue.classList.remove("red-x");
-                    //now adds green check
-                    firstWordDownClue.classList.add("fa-solid");
-                    firstWordDownClue.classList.add("green-tic");
-                    firstWordDownClue.classList.add("fa-check");
-                    continue;
-    
-                    
-                } else {
-                    //adds incorrect answered word to incorrect answers section
-                    incorrectAnswerBox.innerHTML += (array1[firstElementIndex] + "<br>");
-                
-                
-    
-                //adds red "x" for incorrect entered down word to corresponding clue
-                if (firstElementIndex === 0) {
-                    let firstWordAccrosClue = document.getElementById("first-word-accros-clue");
-                    //however checks if green check exists and removes this
-                    if (firstWordAccrosClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                        firstWordAccrosClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    }
-                    //adds red "x" mark to incorrect guessed clue
-                    firstWordAccrosClue.classList.add("fa-solid", "fa-xmark", "red-x");
-                    console.log("red x triggered");
-                } else if (firstElementIndex === 1) {
-                    let secondWordAccrosClue = document.getElementById("second-word-accros-clue");
-                    if (secondWordAccrosClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                        secondWordAccrosClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    }
-                    //Now adds red "x" mark to incorrect guessed clue
-                    secondWordAccrosClue.classList.add("fa-solid", "fa-xmark", "red-x");
-                } else if (firstElementIndex === 2) {
-                    let thirdWordAccrosClue = document.getElementById("third-word-accros-clue");
-                    if (thirdWordAccrosClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                        thirdWordAccrosClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    }
-                    //adds red "x" mark to incorrect guessed clue
-                    thirdWordAccrosClue.classList.add("fa-solid", "fa-xmark", "red-x");
-                } else if (firstElementIndex === 3) {
-                    let fourthWordAccrosClue = document.getElementById("fourth-word-accros-clue");
-                    if (fourthWordAccrosClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                        fourthWordAccrosClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                    }
-                    //adds red "x" mark to incorrect guessed clue
-                    fourthWordAccrosClue.classList.add("fa-solid", "fa-xmark", "red-x");
-                } else if (firstElementIndex === 4) {
-                    let fifthWordAccrosClue = document.getElementById("fifth-word-accros-clue");
-                    //however checks if green check exists and removes this
-                    if (fifthWordAccrosClue.classList.contains("fa-solid", "fa-check", "green-tic")) {
-                        fifthWordAccrosClue.classList.remove("fa-solid", "fa-check", "green-tic");
-                        /*firstWordDownClue.classList.remove("fa-xmark");
-                        firstWordDownClue.classList.remove("red-x");
-                    }
-                    //adds red "x" mark to incorrect guessed clue
-                    fifthWordAccrosClue.classList.add("fa-solid", "fa-xmark", "red-x");
-                }
-            }
-                incorrecAnswerBoxContent = incorrectAnswerBox.textContent;
-                console.log("Content of correctAnswerBoxContent: ", incorrecAnswerBoxContent);
-        }  
-    }
-}*/
-    
-/**compare user entered letters down with correct crossword down words and return red "x" or green check mark and correct/incorrect words */
-/*unction userEnteredWordsDown() {
-    let firstTile = document.getElementById("first-key-input").value;
-    let secondTile = document.getElementById("second-key-input").value;
-    let thirdTile = document.getElementById("third-key-input").value;
-    let fourthTile = document.getElementById("fourth-key-input").value;
-    let sixthTile = document.getElementById("sixth-key-input").value;
-    let seventhTile = document.getElementById("seventh-key-input").value;
-    let eightTile = document.getElementById("eighth-key-input").value;
-    let ninethTile = document.getElementById("nineth-key-input").value;
-    let eleventhTile = document.getElementById("eleventh-key-input").value;
-    let twelfthTile = document.getElementById("twelfth-key-input").value;
-    let thirteenthTile = document.getElementById("thirteenth-key-input").value;
-    let fourteenthTile = document.getElementById("fourteenth-key-input").value;
-    let fifthteenthTile = document.getElementById("fifteenth-key-input").value;
-    let seventeenthTile = document.getElementById("seventeenth-key-input").value;
-    let eighteenthTile = document.getElementById("eighteen-key-input").value;
-    let nineteenthTile = document.getElementById("nineteenth-key-input").value;
-    let twentiethTile = document.getElementById("twentieth-key-input").value;
-    let twentysecondTile = document.getElementById("twentysecond-key-input").value;
-    let twentyhirdTile = document.getElementById("twentythird-key-input").value;
-    let twentyfourth = document.getElementById("twentyfourth-key-input").value;
-    let twentyfifth = document.getElementById("twentyfifth-key-input").value;
-    
-
-    let userEnteredDownWordsArray = [[firstTile, sixthTile, eleventhTile], [secondTile, seventhTile, twelfthTile, seventeenthTile, twentysecondTile], [thirdTile, eightTile, thirteenthTile, eighteenthTile, twentyhirdTile], [fourthTile, ninethTile, fourteenthTile, nineteenthTile, twentyfourth], [fifthteenthTile, twentiethTile, twentyfifth]];
-
-    let userEnteredDownWordsList = [];    
-
-    for (let item = 0; item < userEnteredDownWordsArray.length; item++) {
-        let word = "";
-        
-        for (let letter = 0; letter < userEnteredDownWordsArray[item].length; letter++) {
-            word += userEnteredDownWordsArray[item][letter].toUpperCase();
-        //upperCaseWord = word.toUpperCase();
-        }
-        userEnteredDownWordsList.push(word);
-        console.log("Word: ", word);
-        console.log("userEnteredDownWordsList: ", userEnteredDownWordsList);
-    
-    }
-
-    compareArraysDown(userEnteredDownWordsList, correctCrosswordDown())
-   
-    console.log("User entered down list: ", userEnteredDownWordsList, "\nCorrect crossword down list: ", correctCrosswordDown());
-    console.log("User entered word down from unified function: ", userEnteredDownWordsList)
-}*/
 
 /**compare user entered letters down with correct crossword down words and return red "x" or green check mark and correct/incorrect words */
 function userEnteredWordsAll() {
@@ -693,52 +272,6 @@ function userEnteredWordsAll() {
     console.log("User entered word down from unified function: ", userEnteredWordsList)
 }
 
-/*unction userEnteredWordsAcross() {
-    let firstTile = document.getElementById("first-key-input").value;
-    let secondTile = document.getElementById("second-key-input").value;
-    let thirdTile = document.getElementById("third-key-input").value;
-    let fourthTile = document.getElementById("fourth-key-input").value;
-    let sixthTile = document.getElementById("sixth-key-input").value;
-    let seventhTile = document.getElementById("seventh-key-input").value;
-    let eightTile = document.getElementById("eighth-key-input").value;
-    let ninethTile = document.getElementById("nineth-key-input").value;
-    let eleventhTile = document.getElementById("eleventh-key-input").value;
-    let twelfthTile = document.getElementById("twelfth-key-input").value;
-    let thirteenthTile = document.getElementById("thirteenth-key-input").value;
-    let fourteenthTile = document.getElementById("fourteenth-key-input").value;
-    let fifthteenthTile = document.getElementById("fifteenth-key-input").value;
-    let seventeenthTile = document.getElementById("seventeenth-key-input").value;
-    let eighteenthTile = document.getElementById("eighteen-key-input").value;
-    let nineteenthTile = document.getElementById("nineteenth-key-input").value;
-    let twentiethTile = document.getElementById("twentieth-key-input").value;
-    let twentysecondTile = document.getElementById("twentysecond-key-input").value;
-    let twentyhirdTile = document.getElementById("twentythird-key-input").value;
-    let twentyfourth = document.getElementById("twentyfourth-key-input").value;
-    let twentyfifth = document.getElementById("twentyfifth-key-input").value;
-    
-
-    let userEnteredAcrossWordsArray = [[firstTile, secondTile, thirdTile, fourthTile], [sixthTile, seventhTile, eightTile, ninethTile], [eleventhTile, twelfthTile, thirteenthTile, fourteenthTile, fifthteenthTile], [seventeenthTile, eighteenthTile, nineteenthTile, nineteenthTile, twentiethTile], [twentysecondTile, twentyhirdTile, twentyfourth, twentyfifth]];
-
-    let userEnteredAcrossWordsList = [];    
-
-    for (let item = 0; item < userEnteredAcrossWordsArray.length; item++) {
-        let word = "";
-        
-        for (let letter = 0; letter < userEnteredAcrossWordsArray[item].length; letter++) {
-            word += userEnteredAcrossWordsArray[item][letter].toUpperCase();
-        //upperCaseWord = word.toUpperCase();
-        }
-        userEnteredAcrossWordsList.push(word);
-        console.log("Word: ", word);
-        console.log("userEnteredAcrossWordsList: ", userEnteredAcrossWordsList);
-    
-    }
-
-    compareArraysAcross(userEnteredAcrossWordsList, correctCrosswordAcross())
-   
-    console.log("User entered down list: ", userEnteredAcrossWordsList, "\nCorrect crossword down list: ", correctCrosswordAcross());
-}*/
-
 /**Removes green checks for all correct answers and green tile outlines */
 function resetAll() {
     
@@ -768,8 +301,6 @@ function resetAll() {
     incorrectDisplayedAnswers.innerText = "";
 
 }   
-
-
 
 document.getElementById("submit-button").addEventListener("click", userEnteredWordsAll);
 document.getElementById("reset-button").addEventListener("click", resetAll);
