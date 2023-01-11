@@ -5,7 +5,7 @@ Le Crossword is a basic crossword game written in JavaScript allowing players to
 
 Le Crossword demonstrates a basic game concept however might provide inspiration for developers who wish to develop a more advanced crossword with JavaScript.
 
-![Love Art displayed in Am I Responsive Website (https://ui.dev/amiresponsive?url=https://sven-cork.github.io/love-art)](/assets/images/responsive-website3.jpg)
+![Le Crossword displayed in Am I Responsive Website (https://ui.dev/amiresponsive?url=https://sven-cork.github.io/love-art)](/assets/images/responsive-website3.jpg)
 
 ## Table of contents
 
