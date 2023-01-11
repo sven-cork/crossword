@@ -12,9 +12,11 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
 - [Features](#features)
   - [Heading](#heading)
   - [Crossword Area](#crossword-area)
-  - [Crossword Area](#crossword-area)
+  - [Clues Area](#clues-area)
+  - [Corrected Words Area](#clues-area)
   - [Footer](#footer)
 
+- [Design](#design)
 - [Technologies Utilised](#technologies-utilised)
 - [Testing](#testing)
 - [Validation](#validation)
@@ -42,42 +44,34 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
 
   ![Screenshot of Crossword Area](/assets/images/crossword_area.png) 
 
+- ### Clues Area
+  - Clues provided for the user comprising five horizontal and five vertical words.
+  - Green check marks or red "X" marks displayed next to each clue after pressing submit.
+
+  ![Screenshot of Clues Area](/assets/images/clues_area.png)
+ 
+- ### Corrected Words Area
+  - After submitting the crossword the correct or incorrect guessed word appears in the corrected words area. The left side of the table lists
+  the correct guessed words in green color. The incorrect words are located on the right side in red color.
+
+  ![Screenshot of Corrected Words Area](/assets/images/corrected_words_area.png)
+
 - ### Footer
   - The footer contains social media links for Facebook, Twitter and Instagram.
   - The links are stylised icons from Font Awesome.
-  - The links are displayed on all pages for easy navigation.
-
-      
-  ![Screenshot of Love Art footer](/assets/images/footer.jpg)
   
-
-- ### Home Page
-  - The home page contains a hero image displaying a paing palette with colours and brush, aligning with the theme of this website.
-  - In the bottom right corner is a small overlay with Love Art name and slogan. The background color is matched to the overall color 
-    style of the hero image.
-
-  
-  ![Screenshot of Home page Hero Image](/assets/images/hero-image-readme.jpg)
-
-  - In the middle of the Home page there are three separate sections advertising the following activites: "Drawing Walks", "Group Events" and an invitation to learn painting and drawing.
-
-  ![Screenshot of Home page events section](/assets/images/home-page-events2.jpg)
-
-  - At the end of the Home page there is a section displaying feedback from Art Lover event participants.
-
-  ![Screenshot of Home page feedback section](/assets/images/feedback.jpg)
-
+  ![Screenshot of Footer Area](/assets/images/footer.png)
+        
+## Design
+  - Courier New was chosen for header font style as this I believe evokes a sense of classic old newspapper.
+  - The hero image has few colors and the wooden tiles provides a dominant earthy tone against which the crossword area is well balanced.
+  - Considering the crossword area is busy with 25 tiles, the rest of the website is kept minimalistic with mostly dark or white colors and I belive this achieves a nice harmony for the overall impression.
 
 ## Technologies Utilised
 
-- [Google Fonts](https://fonts.google.com/) was used to import fonts: Quicksand, Tangerine and Xanh.
-- [Fontawesome](https://fontawesome.com/) was used for social media icons in the Footer.
-- [Google Maps](https://maps.google.com) was used for maps iFrames on the Enroll page.
-- [TinyPNG](https://tinypng.com/) was used to compress jpeg images.
+- [Fontawesome](https://fontawesome.com/) was used for green check marks, red "x" marks and social media icons in the Footer.
 - Preview.app for macOS was used to re-size images used with Love Art.
-- [GitPod](https://gitpod.io/) was used to code HTML and CSS.
-
-
+- [GitPod](https://gitpod.io/) was used to code HTML, CSS and.
 
 
 ## Testing
@@ -206,10 +200,10 @@ One concern was for the readability of the text located on the Home page on the 
 ## Deployment
 
 - Crossword was deployed via GitHub Pages. Please see deployment steps below:
-  - In the GitHub repository 'love-art', navigate to the Settings tab.
+  - In the GitHub repository 'crossword', navigate to the Settings tab.
   - From the 'Code and automation' section select 'Pages'.
   - From the 'Branch' section select 'Main' and save.
-  - A live link is provided at the top of 'Pages'. The live link can be accessed here - [Love Art](https://sven-cork.github.io/love-art/).  
+  - A live link is provided at the top of 'Pages'. The live link can be accessed here - [Le Crossword](https://sven-cork.github.io/crossword/).  
 
 
 
@@ -217,22 +211,20 @@ One concern was for the readability of the text located on the Home page on the 
 
 ### Images
 
-Images aquired from [Pexels](#pexels.com)
+Hero image aquired from [Pexels](#pexels.com):
+ - crossword2.jpg (original name: pexels-brett-jordan-5908695.jpg) - by Brett Jordan
 
-1. drawing-walk-full.jpg/drawing-walk-full2.jpg (original name: pexels-ekaterina-bolovtsova-5037075.jpg) - by Ekaterine Bolovtsova<br>
-2. enrollment.jpeg (original name: pexels-hazy-mokhlas-47482.jpg) - by Hazy Mokhlas<br>
-3. hero-image6.jpg (original name: pexels-daian-gan-102127.jpg) - by Daian Gan<br>
-4. paint-group-full.jpg (original name: pexels-bruno-bueno-3861423.jpg) - by Bruno Bueno<br>
-
-Images located on the Artwork page belongs to the developer of Love Art.
 
 ### Other
 
 Icons for social media links are from [Fontawesome](https://fontawesome.com/).
 
-Fonts used throughout Love Art website were imported from [Google Fonts](https://fonts.google.com/).
-
 Design style for hero-image with cover text mathing to the dominant tone and background color was influenced from Code Institute Love Running project.
 
-Inspiration for the crossword format and clues (original clue text changed for crossword) was borrowed from James Scalise [YouTube channel:](https://www.youtube.com/watch?v=_KunjDXYYYg&ab_channel=JamesScalise).
+Inspiration for the crossword format and clues (original clue text changed for this project) was borrowed from James Scalise [YouTube channel:](https://www.youtube.com/watch?v=_KunjDXYYYg&ab_channel=JamesScalise).
+
+JavaScript code for arrow function locating items by class borrowed from the website listed below. This code snippet added functionality to the reset button by locating all elements with a green check or red "X" mark in order for them to be removed:
+https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/
+
+Code snippet from line 749 to 753 in scripts.js.
       

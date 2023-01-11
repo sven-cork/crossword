@@ -16,6 +16,10 @@ h1 {
     background: url('../images/crossword2.jpg') no-repeat center center;
 }
 
+.social-media {
+    color: rgb(27, 25, 25);
+}
+
 #game-name {
     margin-left: 10%;
 
