@@ -89,11 +89,12 @@ Manual testing was performed using with the following devices:
 
  |    Feature Tested        |      Expected Result                     |        Actual Result       |        Pass/Fail           |  
  |:-------------------------|:---------------------------------------- |:---------------------------|:---------------------------|                               
- | All words entered correct in crossword|Green check marks displayed for all clues| All clues display green check marks    |        Pass                |
-  | All words entered correct in crossword|All correct words displayed in green color| All correct words returned in green color   |        Pass                |
+ | All words entered correct in crossword|Green check marks displayed for all clues| All clues display green check marks.    |        Pass                |
+  | All words entered correct in crossword|All correct words displayed in green color| All correct words returned in green color.   |        Pass                |
   | All words entered incorrect in crossword|All correct words displayed in red color| Some words across do not display red "X". Last minute change to JavaScript stopped this from working. Will be corrected in future update.   |        Fail                |
-  | All words entered incorrect in crossword|Red "x" marks displayed for all clues| All clues display red "x" marks   |        Pass                |
-  | Reset button clear all tiles and colored words and clues|All tiles and color markings cleared   |    All information cleared       |       Pass              |
+  | All words entered incorrect in crossword|Red "x" marks displayed for all clues| All clues display red "x" marks.   |        Pass                |
+  | Reset button clear all tiles and colored words and clues|All tiles and color markings cleared.   |    All information cleared.       |       Pass              |
+  | Lower case letter entered for all tiles evaluated as uppercase letter.  |    Lower case letter entered evaluates as uppercase letter.      |       Works as expected.              |     Pass
   
 --------------------------------------------------------------------------------------
 
@@ -151,7 +152,7 @@ JavaScript validation was performed using [JSHint](https://jshint.com/) and the 
  - No errors were found.
  - There are 7 functions in the script.js file.
  - The function with the largest signature takes 2 arguments, while the median is 0.
- - There are 94 statements in the largest function, while the median is 2.
+ - There are 92 statements in the largest function, while the median is 2.
  - The most complex function has a cyclomatic complexity value of 46, while the median is 1.
 
 ## Performance/Accessibility 
