@@ -5,8 +5,6 @@ function correctCrosswordAll() {
 
 /**compare user entered words down against correct crossword*/
 function compareArraysAll(array1, array2) {
-
-    console.log("compareArraysDown function triggered");
     
     
     for (let firstElementIndex = 0; firstElementIndex < array1.length; firstElementIndex++) {
@@ -16,7 +14,6 @@ function compareArraysAll(array1, array2) {
 
         //checks if user entered word down based on index corresponds to correct crossword down by same index
         if (array1[firstElementIndex] === array2[firstElementIndex]) {
-            console.log("First element index item is: ", array1[firstElementIndex])
 
             //checks if correct answered word already exist in correct section
             if (correctAnswerBox.textContent.includes((array1[firstElementIndex]))) {
@@ -121,10 +118,10 @@ function compareArraysAll(array1, array2) {
                 fifthWordAcrossClue.classList.add("fa-solid", "fa-check", "green-tic");
             }
 
-          //answered word is not correct
+        //answered word is not correct and is not empty
         } else if (array1[firstElementIndex] != "") {
 
-            //checks if correct answered word already exist in correct section
+            //checks if correct answered word already exist in incorrect section
             if (incorrectAnswerBox.textContent.includes((array1[firstElementIndex]))) {
                 continue;
 
@@ -258,8 +255,7 @@ function userEnteredWordsAll() {
         //upperCaseWord = word.toUpperCase();
         }
         userEnteredWordsList.push(word);
-        console.log("Word: ", word);
-        console.log("userEnteredDownWordsList: ", userEnteredWordsList);
+       
     }
 
     compareArraysAll(userEnteredWordsList, correctCrosswordAll());
@@ -271,7 +267,7 @@ function resetAll() {
     /*remove green and red borders around letters corresponding to correct words
     remove green check marks and rex "x" marks for correct and incorrectly entered words
     credit for the code below sourced from: https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/*/
-    console.log("Start reset button border removal");
+    
     let inputElements = document.querySelectorAll('input, i');
 
     inputElements.forEach((element) => {

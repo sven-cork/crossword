@@ -27,6 +27,7 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
   - [Lighthouse Desktop version test outcome](#lighthouse-desktop-version-test-outcome)
   - [Lighthouse Mobile version test outcome](#lighthouse-mobile-version-test-outcome)
 - [Deployment](#deployment)
+  - [Forking](#forking)
 - [Credits](#credits)
 
 ## Features
@@ -90,7 +91,7 @@ Manual testing was performed using with the following devices:
  |:-------------------------|:---------------------------------------- |:---------------------------|:---------------------------|                               
  | All words entered correct in crossword|Green check marks displayed for all clues| All clues display green check marks    |        Pass                |
   | All words entered correct in crossword|All correct words displayed in green color| All correct words returned in green color   |        Pass                |
-  | All words entered incorrect in crossword|All correct words displayed in red color| All incorrect words returned in red color   |        Pass                |
+  | All words entered incorrect in crossword|All correct words displayed in red color| Some words across do not display red "X". Last minute change to JavaScript stopped this from working. Will be corrected in future update.   |        Fail                |
   | All words entered incorrect in crossword|Red "x" marks displayed for all clues| All clues display red "x" marks   |        Pass                |
   | Reset button clear all tiles and colored words and clues|All tiles and color markings cleared   |    All information cleared       |       Pass              |
   
@@ -127,7 +128,7 @@ Browser Testing
 
 <details>
 
-<summary>HTML validation for html.index/summary>
+<summary>HTML validation for html.index/</summary>
 
 ![W3 HTML Checker result for index.html](/assets/images/html_check.png)
 
@@ -180,12 +181,13 @@ For both desktop and mobile versions of Lighthouse a score over 90% were achieve
 
 ## Deployment
 
-- Crossword was deployed via GitHub Pages. Please see deployment steps below:
-  - In the GitHub repository 'crossword', navigate to the Settings tab.
-  - From the 'Code and automation' section select 'Pages'.
-  - From the 'Branch' section select 'Main' and save.
-  - A live link is provided at the top of 'Pages'. The live link can be accessed here - [Le Crossword](https://sven-cork.github.io/crossword/).  
-
+### Forking
+1. Open [GitHub](https://github.com).
+2. Navigate to the intended repository.
+3. Select "Fork" in the top rigth corner of the page.
+4. Select the owner of the fork repository in the drop menu provided.
+5. Select the "Create Fork" button.
+6. Your copy of the original repository has been created.
 
 
 ## Credits
