@@ -81,46 +81,44 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
 
 ## Testing
 
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
 Manual testing was performed using with the following devices: 
  - iMac 27" 2017, macOS 12.6 (Monterey)
  - iPad Air (3rd Generation), iPadOS 15.554
  - iPhone 12, iOS 15.3.1
 
- |    Feature Tested        |      Expected Result         |        Actual Result       |        Pass/Fail           |  
+ |    Feature Tested        |      Expected Result                     |        Actual Result       |        Pass/Fail           |  
  |:-------------------------|:---------------------------------------- |:---------------------------|:---------------------------|                               
- | All words entered correct in crossword|Green check marks displayed for all clues|    |All clues display green check marks    |        Pass                |
+ | All words entered correct in crossword|Green check marks displayed for all clues| All clues display green check marks    |        Pass                |
+  | All words entered correct in crossword|All correct words displayed in green color| All correct words returned in green color   |        Pass                |
+  | All words entered incorrect in crossword|All correct words displayed in red color| All incorrect words returned in red color   |        Pass                |
+  | All words entered incorrect in crossword|Red "x" marks displayed for all clues| All clues display red "x" marks   |        Pass                |
+  | Reset button clear all tiles and colored words and clues|All tiles and color markings cleared   |    All information cleared       |       Pass              |
+  
+--------------------------------------------------------------------------------------
 
+Testing Le Crossword for different devices using Google Developer tools
 
+|    Device        |      Result                     |
+|:-----------------|:--------------------------------|
+|  iPhone 12 Pro   |      Works as expected          |
+|  iPhone SE       |      Works as expected          |
+|  Samsung Galaxy A51/71       |      Works as expected          |
+|  iPad Air     |      Works as expected, however crossword area could be made larger|
+|  Surface Pro 7    |      Works as expected, however in portrait mode the content is pushed on the top of the display|
+|  Next Hub   |      Works as expected|
 
+--------------------------------------------------------------------------------------
 
-<details>
-<summary>iPhone SE</summary>
+Browser Testing
 
-![Chrome Dev Tools iPhone SE](/assets/images/iphonese.jpg)
+|    Browser (version)       |      Result                     |
+|:-----------------|:--------------------------------|
+|  Google Chrome (108.0.5359.124)  |      Works as expected          |
+|  Safari (15.6.1)       |      Works as expected          |
+|  Firefox (107.0.1)       |      Works as expected          |
 
-</details>
+--------------------------------------------------------------------------------------
 
-<details>
-<summary>Samsung Galaxy S8+</summary>
-
-![Chrome Dev Tools Samsung Galaxy S8+](/assets/images/galaxys8.jpg)
-
-</details>
-
-<details>
-<summary>Surface Pro 7</summary>
-
-![Chrome Dev Tools Samsung Galaxy S8+](/assets/images/surfacepro7.jpg)
-
-</details>
 
 ## Validation
 
@@ -138,8 +136,6 @@ Manual testing was performed using with the following devices:
 ### CSS Validation
 
 - [W3 CSS Checker](https://jigsaw.w3.org/css-validator/) was used to test CSS validation. The website passed as per below screenshot.
-
-</details>
 
 <details>
 
