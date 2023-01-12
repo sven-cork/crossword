@@ -115,7 +115,7 @@ Further tests were carried out using Chrome dev tools (toggle device tool bar) f
 
 <details>
 
-<summary>Le Crossword</summary>
+<summary>HTML validation for html.index/summary>
 
 ![W3 HTML Checker result for index.html](/assets/images/html_check.png)
 
@@ -134,6 +134,8 @@ Further tests were carried out using Chrome dev tools (toggle device tool bar) f
 ![W3 CSS Checker result for style.css](/assets/images/css_validation.png)
 
 </details>
+
+### JavaScript Validation
 
 ## Performance/Accessibility 
 
@@ -181,7 +183,7 @@ Hero image aquired from [Pexels](#pexels.com):
 ### Code
 - JavaScript code for arrow function locating items by class borrowed from the website listed below. This code snippet added functionality to the reset button by locating all elements with a green check or red "X" mark in order for them to be removed:
 https://codingbeautydev.com/blog/javascript-remove-class-from-multiple-elements/
-- Code snippet from line 749 to 753 in scripts.js.
+- Code snippet from line 275 to 278 in scripts.js.
 
 
 ### Other
