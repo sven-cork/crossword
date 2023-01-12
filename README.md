@@ -81,11 +81,25 @@ Le Crossword demonstrates a basic game concept however might provide inspiration
 
 ## Testing
 
-- The website has been tested to work with the following web browsers: Safari, Chrome and Firefox
-- Love Art website displays as intended for all screen sizes when tested with Google Chrome dev tools pre-configured device formats. When the browser window is adjusted manually from maximum to smallest width, all elements display as intended.
-- Manual testing of the site was successful on the following devices: iPhone 12, iPad Air (3rd generation), iPad Air 2 and iMac 27".
 
-Further tests were carried out using Chrome dev tools (toggle device tool bar) for the following devices (see screenshots below): 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+
+Manual testing was performed using with the following devices: 
+ - iMac 27" 2017, macOS 12.6 (Monterey)
+ - iPad Air (3rd Generation), iPadOS 15.554
+ - iPhone 12, iOS 15.3.1
+
+ |    Feature Tested        |      Expected Result         |        Actual Result       |        Pass/Fail           |  
+ |:-------------------------|:---------------------------------------- |:---------------------------|:---------------------------|                               
+ | All words entered correct in crossword|Green check marks displayed for all clues|    |All clues display green check marks    |        Pass                |
+
+
+
 
 <details>
 <summary>iPhone SE</summary>
@@ -136,6 +150,12 @@ Further tests were carried out using Chrome dev tools (toggle device tool bar) f
 </details>
 
 ### JavaScript Validation
+JavaScript validation was performed using [JSHint](https://jshint.com/) and the following results were returned:
+ - No errors were found.
+ - There are 7 functions in the script.js file.
+ - The function with the largest signature takes 2 arguments, while the median is 0.
+ - There are 94 statements in the largest function, while the median is 2.
+ - The most complex function has a cyclomatic complexity value of 46, while the median is 1.
 
 ## Performance/Accessibility 
 
